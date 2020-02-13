@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gar:registrationRequest xmlns:sikb="http://www.sikb.nl/imsikb0101"
+                         xmlns:gar="http://www.broservices.nl/xsd/isgar/1.0"
+                         xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+                         xmlns:gml="http://www.opengis.net/gml/3.2"
+                         xmlns:imm="http://www.sikb.nl/immetingen"
+                         xmlns:garcom="http://www.broservices.nl/xsd/garcommon/1.0"
+                         xmlns:sam="http://www.opengis.net/sampling/2.0"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xmlns:spec="http://www.opengis.net/samplingSpecimen/2.0"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+   <brocom:requestReference>[todo-mapping?]</brocom:requestReference>
+   <brocom:deliveryAccountableParty>urn:imsikb0101:Bronhouders:id:54</brocom:deliveryAccountableParty>
+   <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+   <gar:sourceDocument>
+      <gar:GAR gml:id="_d593fd8e-813a-4660-88ad-9e6ea38ca415">
+         <gar:objectIdAccountableParty>d593fd8e-813a-4660-88ad-9e6ea38ca415</gar:objectIdAccountableParty>
+         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb sample file]</gar:qualityControlMethod>
+         <gar:groundwaterMonitoringNet>[todo no mapping yet]</gar:groundwaterMonitoringNet>
+         <monitoringPoint>
+            <garcom:GroundwaterMonitoringTube gml:id="_85bbe301-1595-479b-ae76-2d6a5f1d6766">
+               <garcom:broId>[todo get BRO GMW ID based on??]</garcom:broId>
+               <garcom:tubeNumber>[todo get BRO GMW tube number based on??]</garcom:tubeNumber>
+            </garcom:GroundwaterMonitoringTube>
+         </monitoringPoint>
+         <fieldResearch>
+            <garcom:samplingDateTime>2013-04-12T14:15:00.00</garcom:samplingDateTime>
+            <garcom:samplingOperator>
+               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, value of processOperator?]</brocom:chamberOfCommerceNumber>
+            </garcom:samplingOperator>
+            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">nen5744/A1</garcom:samplingStandard>
+            <garcom:samplingDevice>
+               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">slangenpomp</garcom:pumpType>
+            </garcom:samplingDevice>
+            <garcom:fieldObservation>
+               <garcom:primaryColour codeSpace="urn:bro:gar:Colour">wit</garcom:primaryColour>
+               <garcom:secondaryColour codeSpace="urn:bro:gar:Colour">grijs</garcom:secondaryColour>
+               <garcom:colourStrength codeSpace="urn:bro:gar:ColourStrength">licht</garcom:colourStrength>
+               <garcom:abnormalityInCooling>ja</garcom:abnormalityInCooling>
+               <garcom:abnormalityInDevice>nee</garcom:abnormalityInDevice>
+               <garcom:pollutedByEngine>onbekend</garcom:pollutedByEngine>
+               <garcom:filterAerated>ja</garcom:filterAerated>
+               <garcom:groundWaterLevelDroppedTooMuch>nee</garcom:groundWaterLevelDroppedTooMuch>
+               <garcom:abnormalFilter>onbekend</garcom:abnormalFilter>
+               <garcom:sampleAerated>ja</garcom:sampleAerated>
+               <garcom:hoseReused>nee</garcom:hoseReused>
+               <garcom:temperatureDifficultToMeasure>onbekend</garcom:temperatureDifficultToMeasure>
+            </garcom:fieldObservation>
+            <garcom:fieldMeasurement>
+               <garcom:parameter>1496</garcom:parameter>
+               <garcom:fieldMeasurementValue uom="mg/l">5.123</garcom:fieldMeasurementValue>
+               <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">goedgekeurd</garcom:qualityControlStatus>
+            </garcom:fieldMeasurement>
+            <garcom:fieldMeasurement>
+               <garcom:parameter>6024</garcom:parameter>
+               <garcom:fieldMeasurementValue uom="10^-3">3</garcom:fieldMeasurementValue>
+               <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">afgekeurd</garcom:qualityControlStatus>
+            </garcom:fieldMeasurement>
+            <garcom:fieldMeasurement>
+               <garcom:parameter>3548</garcom:parameter>
+               <garcom:fieldMeasurementValue uom="uS/cm">15.123</garcom:fieldMeasurementValue>
+               <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">onbekend</garcom:qualityControlStatus>
+            </garcom:fieldMeasurement>
+         </fieldResearch>
+      </gar:GAR>
+   </gar:sourceDocument>
+</gar:registrationRequest>

@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:immetingen="http://www.sikb.nl/immetingen" xmlns:om="http://www.opengis.net/om/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:spec="http://www.opengis.net/samplingSpecimen/2.0" targetNamespace="http://www.sikb.nl/immetingen" elementFormDefault="qualified">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"/>
+	<import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
+	<import namespace="http://www.opengis.net/samplingSpecimen/2.0" schemaLocation="http://schemas.opengis.net/samplingSpecimen/2.0/specimen.xsd"/>
+	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+	<element name="Accuracy" type="immetingen:AccuracyType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Deze DataKlasse bevat optionele attributen die de meetnauwkeurigheid van de klasse measureResult (meetwaarde) weergeven.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AccuracyType">
+		<sequence>
+			<element name="recovery" type="double" minOccurs="0">
+				<annotation>
+					<documentation>Het deel (percentage) van materiaal dat bij een analyse wordt teruggevonden. 
+Altijd de eenheid: %.</documentation>
+				</annotation>
+			</element>
+			<element name="spread" type="double" minOccurs="0">
+				<annotation>
+					<documentation>spreiding = de fout die wordt gemeten (in %) bij meerdere herhaalde metingen van hetzelfde monster/situatie (en door dezelfde laborant/meetapparaat). 
+Altijd de eenheid: %.</documentation>
+				</annotation>
+			</element>
+			<element name="measurementUncertainty" type="double" minOccurs="0">
+				<annotation>
+					<documentation>Meetonzekerheid = de totale fout die de analyse heeft (in %) met inachtname van monstername, variatie in meetapparatuur/laborant en herhaaldelijk meten. In praktijk is dit de waarde die de onzekerheid van de meetwaarde aangeeft.
+Altijd de eenheid: %.</documentation>
+				</annotation>
+			</element>
+			<element name="zScore" type="double" minOccurs="0">
+				<annotation>
+					<documentation>Dit is een optionele waarde die aangeeft hoe de meetwaarde scoort ten opzichte van andere technieken of laboratoria. Dit kunnen ringonderzoeken zijn of vergelijkingen tussen verschillende meetapparatuur.</documentation>
+				</annotation>
+			</element>
+			<element name="drift" type="double" minOccurs="0">
+				<annotation>
+					<documentation>dit is de mate van verloop van de sensor in de tijd (in %/jaar). Sensoren zullen in de tijd een veroudering doormaken en maken afhankelijk van de omstandigheden meer of minder drift door. Deze drift kan gekwantificeerd worden en is o.a. afhankelijk van de leeftijd. Dit treedt vooral op bij on-line sensoren.
+Altijd de eenheid: %.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AccuracyPropertyType">
+		<sequence>
+			<element ref="immetingen:Accuracy"/>
+		</sequence>
+	</complexType>
+	<element name="Address" type="immetingen:AddressType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="AddressType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="BAGIdentification" type="string" minOccurs="0">
+						<annotation>
+							<documentation>BAG identificatie van een nummeraanduiding.
+Indien dit veld niet gevuld is, zijn de bijbehorende gegevens niet-authentieke BAG gegevens. Alleen als de BAGidentificatie gevuld is, kan hierop teruggemeld worden.
+Identificatie is vastgelegd als GGGGTTNNNNNNNNNN waarbij GGGG =gemeentecode, TT = objecttypecode, NNNNNNNNNN = binnen een gemeente uniek tiencijferig nummer.</documentation>
+						</annotation>
+					</element>
+					<element name="city" type="string" minOccurs="0">
+						<annotation>
+							<documentation>plaats - Een (woon)plaats is een door het bevoegde gemeentelijke orgaan 
+als zodanig aangewezen en van een naam voorzien gedeelte van het grondgebied van de gemeente.</documentation>
+						</annotation>
+					</element>
+					<element name="country" type="string" minOccurs="0">
+						<annotation>
+							<documentation>land</documentation>
+						</annotation>
+					</element>
+					<element name="districtCode" type="string" minOccurs="0">
+						<annotation>
+							<documentation>gem_code - De unieke CBS-aanduiding van de gemeente, waarbinnen het adres is gelegen.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="letter" type="string" minOccurs="0">
+						<annotation>
+							<documentation>huisletter -  Een door het bevoegde gemeentelijke orgaan ten aanzien van een 
+adresseerbaar object toegekende toevoeging aan een huisnummer in de vorm van een alfanumeriek teken.</documentation>
+						</annotation>
+					</element>
+					<element name="numberAddition" type="string" minOccurs="0">
+						<annotation>
+							<documentation>lettertoevoeging - Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nadere toevoeging aan een huisnummer of een combinatie van huisnummer en huisletter.</documentation>
+						</annotation>
+					</element>
+					<element name="number" type="string" minOccurs="0">
+						<annotation>
+							<documentation>huisnummer - Een door het bevoegde gemeentelijke orgaan ten aanzien van een adresseerbaar object toegekende nummering</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>opmerkingen</documentation>
+						</annotation>
+					</element>
+					<element name="publicSpace" type="string" minOccurs="0">
+						<annotation>
+							<documentation>straat -  Een OPENBARE RUIMTE is een door het bevoegde gemeentelijke orgaan als zodanig aangewezen en van een naam voorziene buitenruimte die binnen één woonplaats is gelegen.</documentation>
+						</annotation>
+					</element>
+					<element name="zipcode" type="string" minOccurs="0">
+						<annotation>
+							<documentation>postcode - De door TNT Post vastgestelde code behorende bij een bepaalde combinatie van een naam van een woonplaats, naam van een openbare ruimte en een huisnummer.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AddressPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Address"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AddressFeatureComplex" type="immetingen:AddressFeatureComplexType" substitutionGroup="gml:AbstractGML"/>
+	<complexType name="AddressFeatureComplexType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="role" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Domeintabel: Functies_van_adressen</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AddressFeatureComplexPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:AddressFeatureComplex"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Analysis" type="immetingen:AnalysisType" substitutionGroup="immetingen:Observation">
+		<annotation>
+			<documentation>Analyse
+Een analyse waarneming, gemeten en bepaald op een speciale manier.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalysisType">
+		<complexContent>
+			<extension base="immetingen:ObservationType">
+				<sequence>
+					<element name="physicalProperty" type="immetingen:PhysicalPropertyPropertyType">
+						<annotation>
+							<documentation>Samengesteld attribuut waarbij gekozen moet worden uit een grootheid, parameter/typering, hoedanigheid:
+- Typering: classificatie volgens een elders vastgelegde
+beschrijving of methode zoals:
+- Kentallen
+- Indicatoren
+- KRWkwaliteitselementen
+- ParameterGrootheid:
+- Grootheid: Een begrip, dat zich leent voor getalsmatige
+- Parameter: nadere aanduiding
+van het type parameter gebaseerd op:
+- Taxon: eenheid in het classificatiesysteem van
+organismen
+- Object: voorwerp, zaak of persoon die beschouwd of
+behandeld wordt als zodanig
+- ChemischeStof: naamgeving en codering van elementen
+en verbindingen of groepen verbindingen</documentation>
+						</annotation>
+					</element>
+					<element name="statusOfAnalysis" type="immetingen:AnalysisStatusPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AnalysisPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Analysis"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AnalysisProcess" type="immetingen:AnalysisProcessType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Analyse proces
+Het proces dat uitgevoerd is om tot een analyse te komen.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalysisProcessType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="analyticalTechnique" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Analysetechniek 
+Domeintabel: Waardebepalingstechniek</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="certification" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Certificering - aanduiding van het kwaliteitskenmerk volgens welke het laboratorium de
+component heeft geanalyseerd - lovcertificering
+Domeintabel: Certificeringscode</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen bij het analyse proces</documentation>
+						</annotation>
+					</element>
+					<element name="sampleDestructionMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Monsteronsluiting - aanduiding van de norm waaraan de monsteronsluiting voldoet.
+Domeintabel: Monsterbewerkingsmethode</documentation>
+						</annotation>
+					</element>
+					<element name="samplePretreatmentMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Monster voorbehandelingmethode - aanduiding van de norm waaraan de voorbehandeling van het monster voldoet
+Domeintabel: Monsterbewerkingsmethode</documentation>
+						</annotation>
+					</element>
+					<element name="samplePretreatmentDate" type="date" minOccurs="0">
+						<annotation>
+							<documentation>Datum waarop het Monster een voorbehandeling heeft ondergaan</documentation>
+						</annotation>
+					</element>
+					<element name="valuationMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>wijze waarop de meetwaarde bepaald is
+Domeintabel: Waardebepalingsmethode</documentation>
+						</annotation>
+					</element>
+					<element name="accreditationOrganisation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>accreditatieOrganisatie - In de algemene praktijk kunnen aan 1 analyse echter diverse certificeringen hangen (Sterlab, RvA, OVAM, Frankrijk, Duitsland –deelstaat x, y etc..) Daarom moet aangegeven kunnen worden door welke organisatie de accreditatie is verleend.
+Domeintabel: Certificeringscode</documentation>
+						</annotation>
+					</element>
+					<element name="accreditedYN" type="boolean" minOccurs="0">
+						<annotation>
+							<documentation>geaccrediteerdJN - Geeft aan of het resultaat geaccrediteerd is.</documentation>
+						</annotation>
+					</element>
+					<element name="sensingLocationType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Domeintabel: LocatieTypeWaardeBepaling</documentation>
+						</annotation>
+					</element>
+					<element name="sensingDevice" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Domeintabel: Meetapparaat</documentation>
+						</annotation>
+					</element>
+					<element name="compartment" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Compartiment - het compartiment waarin de analyse is uitgevoerd of waarop de rechtstreekse waarneming betrekking heeft. Het analysecompartiment kan afwijken van het monstercompartiment, als het analysevoorschrift een bewerking op het monster voorschrijft of als een waarneming plaatsvindt zonder fysiek monster. Over het algemeen kan gesteld worden dat waarnemingen getoetst kunnen worden aan milieukwaliteitsnormen die gelden voor het analysecompartiment.
+Domeintabel: Compartiment</documentation>
+						</annotation>
+					</element>
+					<element name="measurementOrganisation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Meetinstantie - Naam laboratorium die de analyse heeft uitgevoerd.
+Domeintabel: Meetinstantie</documentation>
+						</annotation>
+					</element>
+					<element name="analysisOperator" type="immetingen:SubjectPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AnalysisProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:AnalysisProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AnalysisRange" type="immetingen:AnalysisRangeType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Alle metagegevens zoals methodes of apparaattype zijn voor alle waarden in de waardereeks gelijk. Koppel zoveel mogelijk van deze metagegevensobjecten aan de waardereeks observation en niet aan de meetwaarde.
+
+phenomenTime = de tijdsperiode van begin van meten tot einde van meten.
+resultTime = de tijd waarop de metingen beschikbaar kwamen.
+validTime = de tijdsperiode waarbinnen de resultaten te gebruiken/valide zijn.
+
+De periode van beginTijd tot eindTijd van de reeks kan ruimer zijn dan de periode van de eerste tijdwaarde tot de laatste tijdwaarde in de reeks indien waarden aan het begin en/of einde van de reeks zijn uitgevallen. 
+Het gaat hier nadrukkelijk niet om de periode waarin een tijdproportioneel verzamelmonster is genomen. Hiervoor wordt verwezen naar de attributen van de klasse WaardeReeksTijd en WaardeReeksPlaatsTijd.
+De periode van geldigBeginTijd tot geldigEindTijd kan gebruikt worden bij waardereeksen die afkomstig zijn uit berekeningen / voorspellingen met simulatiemodellen. De geldigBeginTijd geeft dan de datum/tijd waarop de waardereeks is berekend. De geldigEindTijd wordt ingevuld als er een nieuwe berekening is uitgevoerd. Dan is er ook een nieuwe waardereeks (lees voorspelling) beschikbaar die gebaseerd is op meer recente gegevens. Ook kan deze periode gebruikt worden om bij de periode van gegevens waarop de simulatie is gebaseerd weer te geven.
+De eindTijd is altijd later dan beginTijd.
+De geldigEindTijd is altijd later dan geldigBeginTijd.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalysisRangeType">
+		<sequence>
+			<element name="rangeType" type="gml:CodeType">
+				<annotation>
+					<documentation>Het type van de reeks, waarbij restricties verbonden zijn aan de type RangeResult.diffVar.
+Domeintabel: WaarnemingReeksType</documentation>
+				</annotation>
+			</element>
+			<element name="totalRangeResultCount" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>Aantal bepalingen in de waardereeks, van het type RangeResult.
+Alleen gevuld, indien rangeType = MeervoudigBepaaldeWaardeReeksTijd</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AnalysisRangePropertyType">
+		<sequence>
+			<element ref="immetingen:AnalysisRange"/>
+		</sequence>
+	</complexType>
+	<element name="AnalysisStatus" type="immetingen:AnalysisStatusType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Status van een analyseresultaat, bij terugkoppeling uit het laboratorium na een labopdracht.</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalysisStatusType">
+		<sequence>
+			<element name="statusType" type="gml:CodeType">
+				<annotation>
+					<documentation>Status code - defintief of niet?
+Domeintabel: LabopdrachtStatus</documentation>
+				</annotation>
+			</element>
+			<element name="dateExpected" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Datum waarop het resultaat verwacht wordt definitief te worden.</documentation>
+				</annotation>
+			</element>
+			<element name="versionNumber" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>Als nieuwere resultaten beschikbaar komen, wordt dit nummer opgehoogd door het laboratorium</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AnalysisStatusPropertyType">
+		<sequence>
+			<element ref="immetingen:AnalysisStatus"/>
+		</sequence>
+	</complexType>
+	<element name="AnalyticResult" type="immetingen:AnalyticResultType" substitutionGroup="immetingen:MeasureResult">
+		<annotation>
+			<documentation>Het geanalyseerde resultaat van een waarneming, vooral afkomstig uit het laboratorium</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalyticResultType">
+		<complexContent>
+			<extension base="immetingen:MeasureResultType">
+				<sequence>
+					<element name="limitSymbol" type="string" minOccurs="0">
+						<annotation>
+							<documentation>LimietSymbool, toegestane waardes: '&amp;lt;' en '&amp;gt;'. 
+'&amp;lt;' staat voor 'kleiner dan laagste waarde detectiegrens'
+'&amp;gt;' staat voor 'groter dan hoogste waarde detectiegrens'
+
+De waarde kan op 2 mogelijkheden opgenomen worden in de uitwisseling:
+1) als CData blok:  &lt;![CDATA[&lt;]]&gt;  of &lt;![CDATA[&gt;]]&gt;
+2) als HTML code: '&amp;amp; lt;' of '&amp;amp; gt;'</documentation>
+						</annotation>
+					</element>
+					<element name="alphanumericValue" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Textuele waarde bij een analyse resultaat</documentation>
+						</annotation>
+					</element>
+					<element name="uncertainty" type="immetingen:MeasureUncertaintyPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AnalyticResultPropertyType">
+		<sequence>
+			<element ref="immetingen:AnalyticResult"/>
+		</sequence>
+	</complexType>
+	<element name="BioObservation" type="immetingen:BioObservationType" substitutionGroup="immetingen:Observation">
+		<annotation>
+			<documentation>Een monster waarop biologische metingen worden gedaan. Met biologische metingen worden metingen van biotaxa (lees organismen) bedoeld. Dit betreft dus altijd een waarneming van een bepaalde grootheid van een biotaxon, bijvoorbeeld de grootheid ‘Aantal’, ‘Aanta per volume’, ‘Massa per oppervlakte’ of ‘Bedekking’.
+
+Deze waarneming maakt over het algemeen gebruik van een MeasureResult.</documentation>
+		</annotation>
+	</element>
+	<complexType name="BioObservationType">
+		<complexContent>
+			<extension base="immetingen:ObservationType">
+				<sequence>
+					<element name="physicalProperty" type="immetingen:PhysicalPropertyPropertyType">
+						<annotation>
+							<documentation>Samengesteld attribuut waarbij gekozen moet worden uit een grootheid, parameter/typering, hoedanigheid:
+- Typering: classificatie volgens een elders vastgelegde
+beschrijving of methode zoals:
+- Kentallen
+- Indicatoren
+- KRWkwaliteitselementen
+- ParameterGrootheid:
+- Grootheid: Een begrip, dat zich leent voor getalsmatige
+vastlegging en verwerking 
+- Parameter: nadere aanduiding
+van het type parameter gebaseerd op:
+- Taxon: eenheid in het classificatiesysteem van
+organismen
+- Object: voorwerp, zaak of persoon die beschouwd of
+behandeld wordt als zodanig
+- ChemischeStof: naamgeving en codering van elementen
+en verbindingen of groepen verbindingen</documentation>
+						</annotation>
+					</element>
+					<element name="stageOfLife" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Levensstadium - Adult, Larve, …
+Domeintabel:  BiologischKenmerk, groep: Levensstadium</documentation>
+						</annotation>
+					</element>
+					<element name="lengthClass" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Lengteklasse - Vislengteklasse-1 (ouder dan 0+ en met een lengte t/m 15 cm)
+Vislengte snoek klasse 4 (45 t/m 54 cm)
+Domeintabel: BiologischKenmerk, groep: Lengteklasse</documentation>
+						</annotation>
+					</element>
+					<element name="gender" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Geslacht - Man, Vrouw
+Domeintabel: BiologischKenmerk, groep: Geslacht</documentation>
+						</annotation>
+					</element>
+					<element name="appearance" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Verschijningsvorm - Behaard, Gepantserd, Naakt
+Domeintabel: BiologischKenmerk, groep: Verschijningsvorm</documentation>
+						</annotation>
+					</element>
+					<element name="lifeform" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Levensvorm - Kolonie, Solitair
+of EnergieVorm zoals Fototroof, Heterotroof
+Domeintabel: BiologischKenmerk, groep: Levensvorm</documentation>
+						</annotation>
+					</element>
+					<element name="behavior" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Gedrag- Dood, Levend
+Domeintabel: BiologischKenmerk, groep: Gedrag</documentation>
+						</annotation>
+					</element>
+					<element name="statusOfAnalysis" type="immetingen:AnalysisStatusPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BioObservationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:BioObservation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Biota" type="immetingen:BiotaType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Speciaal datatype voor uitbreidingen aan het monster voor de biota kenmerken voor bio-monsters.</documentation>
+		</annotation>
+	</element>
+	<complexType name="BiotaType">
+		<sequence>
+			<element name="organism" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>organisme - Nadere aanduiding van het organisme waarin het monster is genomen.
+Domeintabel: Biotaxon</documentation>
+				</annotation>
+			</element>
+			<element name="organ" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Soort orgaan.
+Domeintabel: Orgaan</documentation>
+				</annotation>
+			</element>
+			<element name="sampleCriterium" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>monsterCriterium; Nadere aanduiding van de beperking van het monster.
+Domeintabel: BiologischKenmerk, Groep: *.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="BiotaPropertyType">
+		<sequence>
+			<element ref="immetingen:Biota"/>
+		</sequence>
+	</complexType>
+	<element name="CalculatedAnalysis" type="immetingen:CalculatedAnalysisType" substitutionGroup="immetingen:Observation">
+		<annotation>
+			<documentation>Berekende Analyse
+Dit kan zijn een berekende analyse door een correctie of optelling van meerder losse analyses, dit is een Rekenwaarde. 
+Indien een Analyse is gestandaardiseerd en vergeleken is aan normen, dan is dit de Gestandaardiseerdewaarde.</documentation>
+		</annotation>
+	</element>
+	<complexType name="CalculatedAnalysisType">
+		<complexContent>
+			<extension base="immetingen:ObservationType">
+				<sequence>
+					<element name="physicalProperty" type="immetingen:PhysicalPropertyPropertyType">
+						<annotation>
+							<documentation>Samengesteld attribuut waarbij gekozen moet worden uit een grootheid, parameter/typering, hoedanigheid:
+- Typering: classificatie volgens een elders vastgelegde
+beschrijving of methode zoals:
+- Kentallen
+- Indicatoren
+- KRWkwaliteitselementen
+- ParameterGrootheid:
+- Grootheid: Een begrip, dat zich leent voor getalsmatige
+vastlegging en verwerking 
+- Parameter: nadere aanduiding
+van het type parameter gebaseerd op:
+- Taxon: eenheid in het classificatiesysteem van
+organismen
+- Object: voorwerp, zaak of persoon die beschouwd of
+behandeld wordt als zodanig
+- ChemischeStof: naamgeving en codering van elementen
+en verbindingen of groepen verbindingen</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="CalculatedAnalysisPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:CalculatedAnalysis"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Characteristic" type="immetingen:CharacteristicType" substitutionGroup="immetingen:Observation">
+		<annotation>
+			<documentation>Kenmerk
+Een waarneming welke volstaat met een kenmerk, meestal gaat het hier om Zintuigelijke waarneming. De Indicator bepaalt wat het type waarneming is, daarbij behoort een bepaald Result.</documentation>
+		</annotation>
+	</element>
+	<complexType name="CharacteristicType">
+		<complexContent>
+			<extension base="immetingen:ObservationType">
+				<sequence>
+					<element name="indicator" type="gml:CodeType">
+						<annotation>
+							<documentation>Type kenmerk zoals: BZB, BZB Gradatie, BZB Herkomst, Hoofdkleur, Bijkleur, Kleursterkte, Geur, GeurIntensiteit
+Domeintabel: KenmerkBodemlaag of KenmerkMonstername</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerking bij een kenmerk beschrijving</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="CharacteristicPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Characteristic"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="ClassifiedResult" type="immetingen:ClassifiedResultType" substitutionGroup="immetingen:Result">
+		<annotation>
+			<documentation>Een kenmerk resultaat van een waarneming, dit is altijd een verwijzing naar een domeintabel.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ClassifiedResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="classifiedResult" type="gml:CodeType">
+						<annotation>
+							<documentation>Het resultaat van de classificatie, welke dus altijd wijst naar een domeintabel. Dit is alleen wel afhankelijk van het type Observation.
+zie domeintabel: &lt;font color="#1f497d"&gt;&lt;u&gt;KenmerkBodemlaag &lt;/u&gt;&lt;/font&gt;voor de betreffende domeintabel bij een observation.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ClassifiedResultPropertyType">
+		<sequence>
+			<element ref="immetingen:ClassifiedResult"/>
+		</sequence>
+	</complexType>
+	<element name="Depth" type="immetingen:DepthType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Een diepte aanduiding t.o.v. een referentievlak.
+Hiebij is de waarde positief als deze omlaag is.</documentation>
+		</annotation>
+	</element>
+	<complexType name="DepthType">
+		<sequence>
+			<element name="value" type="gml:MeasureType">
+				<annotation>
+					<documentation>waarde van de diepte (in meter minus maaiveld, tenzij bij condition anders aangegeven). Positief is naar beneden.</documentation>
+				</annotation>
+			</element>
+			<element name="condition" type="gml:CodeType">
+				<annotation>
+					<documentation>Referentievlak van de diepte
+Domeintabel: Hoedanigheid (uit de groep: ReferentieVlak)</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Opmerkingen bij een dieptebepaling</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="DepthPropertyType">
+		<sequence>
+			<element ref="immetingen:Depth"/>
+		</sequence>
+	</complexType>
+	<element name="DepthResult" type="immetingen:DepthResultType" substitutionGroup="immetingen:Result"/>
+	<complexType name="DepthResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="startDepth" type="immetingen:DepthPropertyType">
+						<annotation>
+							<documentation>startDiepte</documentation>
+						</annotation>
+					</element>
+					<element name="endDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>eindDiepte</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DepthResultPropertyType">
+		<sequence>
+			<element ref="immetingen:DepthResult"/>
+		</sequence>
+	</complexType>
+	<element name="DescriptionResult" type="immetingen:DescriptionResultType" substitutionGroup="immetingen:Result">
+		<annotation>
+			<documentation>Een beschrijvend resultaat van een waarneming.</documentation>
+		</annotation>
+	</element>
+	<complexType name="DescriptionResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="description" type="string"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DescriptionResultPropertyType">
+		<sequence>
+			<element ref="immetingen:DescriptionResult"/>
+		</sequence>
+	</complexType>
+	<element name="FieldSamplePreparationStep" type="immetingen:FieldSamplePreparationStepType" substitutionGroup="spec:PreparationStep">
+		<annotation>
+			<documentation>Toegepaste monstervoorbehandeling</documentation>
+		</annotation>
+	</element>
+	<complexType name="FieldSamplePreparationStepType">
+		<complexContent>
+			<extension base="spec:PreparationStepType">
+				<sequence>
+					<element name="pretreatment" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Soort voorbehandeling, Zie MonsterVoorbehandeling domeintabel:
+pretreated, conserved, stirred, filtered, sieved.
+Domeintabel: MonsterVoorbehandeling</documentation>
+						</annotation>
+					</element>
+					<element name="preservative" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Conserveringsmiddel dat eventueel gebruikt is. 
+aanduiding van de norm waaraan de monsterconservering voldoet
+Domeintabel: ConserveringsMiddel</documentation>
+						</annotation>
+					</element>
+					<element name="meshSieve" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>Zeef maaswijdte</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="FieldSamplePreparationStepPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:FieldSamplePreparationStep"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Fraction" type="immetingen:FractionType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Uitloogfractie
+Aanduiding op welke fractie de analyse is uitgevoerd</documentation>
+		</annotation>
+	</element>
+	<complexType name="FractionType">
+		<sequence>
+			<element name="sampleCriterium" type="gml:CodeType">
+				<annotation>
+					<documentation>Nadere aanduiding van de beperking van het sediment monster.
+Domeintabel: Hoedanigheid (groep: Korrelgroottefractie)</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="FractionPropertyType">
+		<sequence>
+			<element ref="immetingen:Fraction"/>
+		</sequence>
+	</complexType>
+	<element name="GeoReferenceProcess" type="immetingen:GeoReferenceProcessType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Methode waarop de plaatsbepaling tot stand is gekomen.</documentation>
+		</annotation>
+	</element>
+	<complexType name="GeoReferenceProcessType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="geoMeasureMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>plaatsbepaling - Nadere aanduiding van methode en/of apparaat voor de plaatsbepaling van een meting.
+Domeintabel: Meetapparaat (groep: Plaatsbepalingsapparaat)</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GeoReferenceProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:GeoReferenceProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Height" type="immetingen:HeightType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Een hoogte aanduiding t.o.v. een referentievlak.
+Hiebij is de waarde positief als deze omhoog is.</documentation>
+		</annotation>
+	</element>
+	<complexType name="HeightType">
+		<sequence>
+			<element name="value" type="gml:MeasureType">
+				<annotation>
+					<documentation>Waarde van de hoogte. Positief is omhoog.</documentation>
+				</annotation>
+			</element>
+			<element name="condition" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Referentievlak van de hoogte
+Domeintabel: Hoedanigheid (uit de groep: ReferentieVlak)</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Opmerkingen bij deze hoogtebepaling</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="HeightPropertyType">
+		<sequence>
+			<element ref="immetingen:Height"/>
+		</sequence>
+	</complexType>
+	<element name="HydroObject" type="immetingen:HydroObjectType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Geoobject voor specifieke toepassing in het water beheer.</documentation>
+		</annotation>
+	</element>
+	<complexType name="HydroObjectType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="HydroObjectPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:HydroObject"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="LocationResult" type="immetingen:LocationResultType" substitutionGroup="immetingen:Result">
+		<annotation>
+			<documentation>De locatie waarop het resultaat betrekking heeft</documentation>
+		</annotation>
+	</element>
+	<complexType name="LocationResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="geometry" type="gml:PointPropertyType">
+						<annotation>
+							<documentation>Het geometriepunt waarop het resultaat betrekking heeft</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="LocationResultPropertyType">
+		<sequence>
+			<element ref="immetingen:LocationResult"/>
+		</sequence>
+	</complexType>
+	<element name="MeasureResult" type="immetingen:MeasureResultType" substitutionGroup="immetingen:Result">
+		<annotation>
+			<documentation>Meetresultaat. 
+De uitkomst van een meting in de vorm van een numerieke waarde.</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasureResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="numericValue" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>Numeriekwaarde - de numerieke waarde van de waarneming.
+Wanneer er geen eenheid bij de meting bekend is, moet de eenheid 'Dimensieloos' gebruikt worden.</documentation>
+						</annotation>
+					</element>
+					<element name="valueProcessingMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>waardebewerkingsMethode
+een wiskundige/statistische bewerking die toegepast wordt waarbij de waardebepalingsmethode/analysenorm ongewijzigd blijft.
+
+De bewerking kan worden toegepast op een reeks meetwaarden met gelijke parameter (grootheid/component of typering of taxon of object) of op een reeks meetwaarden met gelijke analysemethode die worden gesommeerd tot een somparameter.
+Domeintabel: WaardebewerkingsMethode</documentation>
+						</annotation>
+					</element>
+					<element name="qualityIndicatorType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>KwaliteitsIndicator/Oordeel -&gt; Detectiegrens e.d.
+Domeintabel: Kwaliteitsoordeel</documentation>
+						</annotation>
+					</element>
+					<element name="accuracy" type="immetingen:AccuracyPropertyType" minOccurs="0"/>
+					<element name="validation" type="immetingen:ValidationPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeasureResultPropertyType">
+		<sequence>
+			<element ref="immetingen:MeasureResult"/>
+		</sequence>
+	</complexType>
+	<element name="MeasureUncertainty" type="immetingen:MeasureUncertaintyType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Meetonzekerheid in het resultaat. Dit is de expanded measuring uncertainty zoals beschreven in het document:  http://www.nordicinnovation.net/nordtestfiler/tec537.pdf</documentation>
+		</annotation>
+	</element>
+	<complexType name="MeasureUncertaintyType">
+		<sequence>
+			<element name="distributionType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Het type statistische verdeling wat hoort bij de waarneming
+Domeintabel: Kansverdeling</documentation>
+				</annotation>
+			</element>
+			<element name="statisticalParameter" type="gml:MeasureType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Parameter die de vorm en afmeting van de statistische verdeling bepaalt.
+Domeintabel: StatistischeParameter</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="MeasureUncertaintyPropertyType">
+		<sequence>
+			<element ref="immetingen:MeasureUncertainty"/>
+		</sequence>
+	</complexType>
+	<element name="MeasurementObject" type="immetingen:MeasurementObjectType" substitutionGroup="sams:SF_SpatialSamplingFeature"/>
+	<complexType name="MeasurementObjectType">
+		<complexContent>
+			<extension base="sams:SF_SpatialSamplingFeatureType">
+				<sequence>
+					<element name="name" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Naam van het meetobject/meetpunt</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="description" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Beschrijving van het meetobject; nadere omschrijving van de locatie van de meting.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen bij het meetobject</documentation>
+						</annotation>
+					</element>
+					<element name="measurementObjectType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Het type meetobject: meetpunt, boorgat, peilbuisput, sleuf, sondering, monsterpunt.
+Domeintabel: MeetObjectSoort</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>De geometry van het meetpunt. Mag Polygon, Point en alles zijn.
+Voorkeur EPSG: &lt;font color="#808080"&gt;Amersfoort / RD New = 28992 - http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::28992&lt;/font&gt;
+Meer info: http://en.wikipedia.org/wiki/Geography_Markup_Language</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>De begintijd van het object, dus wanneer deze is ontstaan om een meting aan te gaan doen.</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>De Eindtijd van het object, dus wanneer deze is verwijderd, na het onstaan om een meting aan te doen.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MeasurementObjectPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:MeasurementObject"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="NEN3610ID" type="immetingen:NEN3610IDType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>-- Definition --
+identificatiegegevens voor de universeel unieke identificatie van een object
+-- Description --
+De combinatie van &amp;lsquo;namespace&amp;rsquo; van een registratie, lokale identificatie en versie informatie maken een object uniek identificeerbaar. Met de informatie van deze klasse kan daardoor met zekerheid worden verwezen naar het geïdentificeerde object.
+-- Source --
+NEN 3610:2011</documentation>
+		</annotation>
+	</element>
+	<complexType name="NEN3610IDType">
+		<sequence>
+			<element name="namespace" type="string">
+				<annotation>
+					<documentation>-- Definition --
+unieke verwijzing naar een registratie van objecten
+-- Description --
+Het attribuut &amp;lsquo;namespace&amp;rsquo; is een unieke verwijzing naar de registratie die de identificatie uitdeelt. Deze lijst van registraties wordt beheerd binnen de context van NEN 3610. Binnen Nederland zal deze namespace vrijwel altijd met &amp;lsquo;NL.&amp;rsquo; beginnen.
+De volgende karakters mogen in een namespace aanduiding voorkomen: {&amp;rdquo;A&amp;rdquo;&amp;hellip;&amp;rdquo;Z&amp;rdquo;, &amp;ldquo;a&amp;rdquo;&amp;hellip;&amp;rdquo;z&amp;rdquo;,    &amp;rdquo;0&amp;rdquo;&amp;hellip;&amp;rdquo;9&amp;rdquo;, &amp;ldquo;_&amp;rdquo;,    &amp;ldquo;- &amp;ldquo;,    &amp;ldquo;,&amp;rdquo;,    &amp;rdquo;.&amp;rdquo;}
+-- Source --
+NEN 3610:2011</documentation>
+				</annotation>
+			</element>
+			<element name="lokaalID" type="string">
+				<annotation>
+					<documentation>-- Definition --
+unieke identificatiecode binnen een registratie
+-- Description --
+&amp;lsquo;LokaalId&amp;rsquo; is de identificatiecode die een object heeft binnen een (lokale) registratie.
+De volgende karakters mogen in een lokaalID voorkomen: {&amp;rdquo;A&amp;rdquo;&amp;hellip;&amp;rdquo;Z&amp;rdquo;,   &amp;ldquo;a&amp;rdquo;&amp;hellip;&amp;rdquo;z&amp;rdquo;, &amp;rdquo;0&amp;rdquo;&amp;hellip;&amp;rdquo;9&amp;rdquo;,    &amp;ldquo;_&amp;rdquo;,    &amp;ldquo;-&amp;ldquo;, &amp;ldquo;,&amp;rdquo;,    &amp;rdquo;.&amp;rdquo;}.
+-- Source --
+NEN 3610:2011
+-- IMSIKB0101 --
+Vullen met een GUID of UUID</documentation>
+				</annotation>
+			</element>
+			<element name="versie" type="string" minOccurs="0">
+				<annotation>
+					<documentation>-- Definition --
+versie-aanduiding van een object
+-- Description --
+Het attribuut &amp;lsquo;versie&amp;rsquo; maakt geen deel uit van de identificatie van het object maar kan worden gebruikt om verschillende versies van hetzelfde object te identificeren.
+-- Source --
+NEN 3610:2011</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="NEN3610IDPropertyType">
+		<sequence>
+			<element ref="immetingen:NEN3610ID"/>
+		</sequence>
+	</complexType>
+	<element name="Observation" type="immetingen:ObservationType" substitutionGroup="om:OM_Observation">
+		<annotation>
+			<documentation>Waarneming
+Een waarneming over een SamplingFeature.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ObservationType">
+		<complexContent>
+			<extension base="om:OM_ObservationType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element minOccurs="0" name="correctnessJudgmentByAccountableParty" type="gml:CodeType">
+						<annotation>
+							<documentation>JuistheidsoordeelDoorBronhouder - Het eindoordeel van de bronhouder over de betrouwbaarheid van een individuele meting van het grondwatersamen-stellingsonderzoek op basis van een, voor het hele onderzoek gebruikte, beoordelingsprocedure.
+
+Dit veld is aangevraagd i.v.m. de BRO en bekend in de BRO-GAR als: 'veldmeting/analyse.status kwaliteitscontrole'.
+Domeintabel: Juistheidsoordeel</documentation>
+						</annotation>
+					</element>
+					<element name="rangeSettings" type="immetingen:AnalysisRangePropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ObservationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Observation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="ObservationProcess" type="immetingen:ObservationProcessType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>De beschrijving van het proces door oa het soort apparaat of zintuig, of combinatie van soorten apparaten en/of zintuigen vast te leggen, waarmee de waarneming, meting of analyse in het veld is uitgevoerd.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ObservationProcessType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="sensingDevice" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>De beschrijving van het soort apparaat of zintuig, of combinatie van soorten apparaten en/of zintuigen, waarmee de waarneming, meting of analyse in het veld wordt uitgevoerd.
+Domeintabellen: Meetapparaat</documentation>
+						</annotation>
+					</element>
+					<element name="sensingLocationType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Aanduiding van de plaats waar het resultaat bepaald is.
+Domeintabel: LocatieTypeWaardeBepaling
+De waarde in-situ is default.</documentation>
+						</annotation>
+					</element>
+					<element name="valuationMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>wijze waarop de meetwaarde bepaald is
+Domeintabel: Waardebepalingsmethode</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ObservationProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:ObservationProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Order" type="immetingen:OrderType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Uitgangspunt is dat  aan een uit te voeren analyse altijd een opdracht vooraf gaat. De klasse Order bevat controle attributen voor de financiële administratie of orderafhandeling voor zowel de uitvoerder als de opdrachtgever, zodat de afgesproken leverings- en betalingscondities getoetst kunnen worden.
+De opdracht zou ook digitaal uitgevaardigd kunnen worden en systemen zouden met de entiteiten uit de klasse Order een match kunnen maken tussen de elektronische opdracht van de ene partij en de elektronisch ontvangen resultaten van de andere partij.</documentation>
+		</annotation>
+	</element>
+	<complexType name="OrderType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="clientReference" type="string" minOccurs="0">
+						<annotation>
+							<documentation>opdrachtReferentieOpdrachtgever - Financieel boekstuknummer van de opdrachtgever.
+Note: De opdrachtgever is diegene waaraan gefactureerd wordt. Het is de diegene die verantwoordelijk is voor de financiële transactie van de opdracht. Dit is niet per definitie de persoon, personen of organisatie(s) voor wie de analyseresultaten bestemd zijn.</documentation>
+						</annotation>
+					</element>
+					<element name="contractorReference" type="string" minOccurs="0">
+						<annotation>
+							<documentation>opdrachtReferentieUitvoerder - Financieel boekstuknummer van de uitvoerder (uitvoerend lab). Dit is in de regel het offerte- en/of opdrachtnummer.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="samples" type="immetingen:SamplePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="OrderPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Order"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Organization" type="immetingen:OrganizationType" substitutionGroup="immetingen:Subject">
+		<annotation>
+			<documentation>Organisatie - Een betrokken organisatie, instantie of bedrijf waarbij contactgegevens meegegeven worden.</documentation>
+		</annotation>
+	</element>
+	<complexType name="OrganizationType">
+		<complexContent>
+			<extension base="immetingen:SubjectType">
+				<sequence>
+					<element name="legalentityNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Rechtspersonen Samenwerkingsverbanden Informatienummer (&lt;i&gt;RSIN&lt;/i&gt;) ten behoeve van raadplegen NHR indien ingevuld.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string" minOccurs="0"/>
+					<element name="organisationType" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>De manier waarop deze betrokkene betrokken is.
+Domeintabel: RolBetrokkene</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="OrganizationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Organization"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Package" type="immetingen:PackageType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Verpakking 
+Een verpakking van het monster. Het monster kan verpakt zijn in 1 of meerdere verpakkingen, deze worden vaak gemarkeerd en later gescand dmv een barcode.</documentation>
+		</annotation>
+	</element>
+	<complexType name="PackageType">
+		<sequence>
+			<element name="name" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Naam van de verpakking</documentation>
+				</annotation>
+			</element>
+			<element name="barcode" type="string" minOccurs="0">
+				<annotation>
+					<documentation>barcode van de verpakking zoals deze naar het laboratorium is gegaan</documentation>
+				</annotation>
+			</element>
+			<element name="packageType" type="gml:CodeType">
+				<annotation>
+					<documentation>Type verpakking, dus flesje, potje, emmer, zak
+Domeintabel: MonsterVerpakking</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Opmerkingen bij de verpakking</documentation>
+				</annotation>
+			</element>
+			<element name="packageMaterialType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Type verpakkingsmateriaal, dus glas, rvs, kunstof, etc
+Domeintabel: MateriaalMonsterVerpakking</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="PackagePropertyType">
+		<sequence>
+			<element ref="immetingen:Package"/>
+		</sequence>
+	</complexType>
+	<element name="Person" type="immetingen:PersonType" substitutionGroup="immetingen:Subject">
+		<annotation>
+			<documentation>Persoon - Een betrokken persoon waarbij contactgegevens meegegeven worden</documentation>
+		</annotation>
+	</element>
+	<complexType name="PersonType">
+		<complexContent>
+			<extension base="immetingen:SubjectType">
+				<sequence>
+					<element name="civilserviceNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Burgerservicenummer; Indien gevuld kan hiermee GBA geraadpleegd worden.</documentation>
+						</annotation>
+					</element>
+					<element name="firstName" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Voornaam</documentation>
+						</annotation>
+					</element>
+					<element name="gender" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Geslacht van de persoon.
+Domeintabel: Geslacht</documentation>
+						</annotation>
+					</element>
+					<element name="lastName" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Achternaam</documentation>
+						</annotation>
+					</element>
+					<element name="middleName" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Tussenvoegsel</documentation>
+						</annotation>
+					</element>
+					<element name="initials" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Initialen</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="PersonPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Person"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="PhysicalProperty" type="immetingen:PhysicalPropertyType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>PhysicalProperty  - Is een (fysieke) eigenschap van een object die kan worden gemeten of waargenomen.
+
+Physical Property is een samengesteld attribuut bestaand uit:				
+•	een grootheid (domeintabel Parameter, groep Grootheid) plus evt.
+•	een parameter (domeintabel Parameter, groep ChemischeStof/groep Object) of domeintabel Biotaxon)  en/of
+•	&amp;#233;&amp;#233;n of meerdere hoedanigheden (domeintabel Hoedanigheid).
+
+Voorbeelden hiervan zijn:
+
+Grootheid (domeintabel Parameter, groep Grootheid): Aantal
+Parameter (domeintabel Parameter, groep Object): Badgast
+
+Grootheid (domeintabel Parameter, groep Grootheid): Waterhoogte
+Hoedanigheid (domeintabel Hoedanigheid): t.o.v. NAP
+
+Grootheid (domeintabel Parameter, groep Grootheid): (massa)Concentratie
+Parameter (domeintabel Parameter, groep ChemischeStof): lood
+Hoedanigheid (domeintabel Hoedanigheid): t.o.v. drooggewicht</documentation>
+		</annotation>
+	</element>
+	<complexType name="PhysicalPropertyType">
+		<sequence>
+			<element name="quantity" type="gml:CodeType">
+				<annotation>
+					<documentation>Grootheid (Aantal, Concentratie, Dikte, Temperatuur, pH)
+Domeintabel: Parameter (in de groep: Grootheid)</documentation>
+				</annotation>
+			</element>
+			<element name="parameter" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Physical Property: Parameter ‘(ChemischeStof: lood, Object: Badgast)’
+Domeintabel: Parameter, biotaxon</documentation>
+				</annotation>
+			</element>
+			<element name="condition" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Hoedanigheid (Filtratie, Drooggewicht, Korrelfractiegroottes)
+Domeintabel: Hoedanigheid</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="PhysicalPropertyPropertyType">
+		<sequence>
+			<element ref="immetingen:PhysicalProperty"/>
+		</sequence>
+	</complexType>
+	<element name="RangeResult" type="immetingen:RangeResultType" substitutionGroup="immetingen:Result"/>
+	<complexType name="RangeResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="orderNumber" type="integer" minOccurs="0">
+						<annotation>
+							<documentation>volgnummer</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen bij het reeksresultaat</documentation>
+						</annotation>
+					</element>
+					<element name="diffVar" type="immetingen:ResultPropertyType" maxOccurs="unbounded"/>
+					<element name="resultValue" type="immetingen:ResultPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RangeResultPropertyType">
+		<sequence>
+			<element ref="immetingen:RangeResult"/>
+		</sequence>
+	</complexType>
+	<element name="Result" type="immetingen:ResultType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Resultaat van een Waarneming</documentation>
+		</annotation>
+	</element>
+	<complexType name="ResultType">
+		<sequence/>
+	</complexType>
+	<complexType name="ResultPropertyType">
+		<sequence>
+			<element ref="immetingen:Result"/>
+		</sequence>
+	</complexType>
+	<element name="Sample" type="immetingen:SampleType" substitutionGroup="spec:SF_Specimen">
+		<annotation>
+			<documentation>Dat deel van de fysieke werkelijkheid dat wordt beschouwd of geanalyseerd.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SampleType">
+		<complexContent>
+			<extension base="spec:SF_SpecimenType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Naam van het monster</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>Datum waarop de monsternemer het monster genomen heeft bij het MeetObject en daarbij (indien van toepassing) het  verzamelmonster heeft afgenomen. Vanuit het lab gezien is deze datum bindend. Aan de hand van deze datum wordt de convserveringstermijnoverschrijding gecontroleerd. Via afspraken met de klant kan hiervan afgeweken worden. Bijvoorbeeld: Ten aanzien van afvalwatermonsters die op weekenddagen zijn genomen geeft  uitgangspunt [schepdag=bezoekdag] praktische problemen. Er zijn bedrijven die met monsterwisselaars (gekoelde) monsters nemen over vr/za, za/zo en zo/ma. Op maandagochtend zijn dan 3 monsters beschikbaar. Het is – om monsterverwisseling te voorkomen - het meest praktisch om elk van deze monsters een aparte monsternemingsdatum toe te kennen, waarbij het beste kan worden aangesloten bij de einddatum bemonstering. Dat is ook vanuit fiscaal oogpunt het meest juist. Daarom kan de voorkeur ernaar uitgaan om voortaan voor etmaalmonsters de einddatum bemonstering aan te houden als monsternemingsdatum. Uiteraard wordt ook de begin- en einddatum steeds vast-gelegd en ingevoerd. De entiteit monsternemingsdatum geeft echter de mogelijkheid hiervan af te wijken en dus de schepdag te hanteren als monsternemingsdatum en niet de einddatum. De monsternemingsdatum is op zich een eenduidig begrip en wordt altijd gevuld, of nu om steekmonsters gaat of niet. Een begindatum of einddatum is dan alleen van toepassing op termijnmonsters.</documentation>
+						</annotation>
+					</element>
+					<element name="lowerDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Onderkant van het traject van het monster</documentation>
+						</annotation>
+					</element>
+					<element name="upperDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Bovenkant van het traject van het monster</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen bij een monster</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0"/>
+					<element minOccurs="0" name="correctnessJudgmentMethod" type="gml:CodeType">
+						<annotation>
+							<documentation>Het protocol of werkvoorschrift dat is toegepast bij de beoordeling van de kwaliteit van de meetwaarden die in het veld en/of het laboratorium gemeten zijn.
+
+Dit veld is aangevraagd i.v.m. de BRO en bekend in de BRO-GAR als: 'Grondwatersamenstellingsonderzoek.beoordelingsprocedure'.
+Domeintabel: JuistheidsoordeelProcedure</documentation>
+						</annotation>
+					</element>
+					<element name="consistsOfPackages" type="immetingen:PackagePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="fraction" type="immetingen:FractionPropertyType" minOccurs="0"/>
+					<element name="biota" type="immetingen:BiotaPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SamplePropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Sample"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SamplingAssignment" type="immetingen:SamplingAssignmentType" substitutionGroup="immetingen:Order">
+		<annotation>
+			<documentation>Een opdracht aan een opdrachtnemer om monstername uit te voeren.
+
+Uitgangspunt is dat aan een uit te voeren analyse altijd een opdracht vooraf gaat. De opdracht zou ook digitaal uitgevaardigd kunnen worden en systemen zouden met de entiteiten uit de klasse Order een match kunnen maken tussen de elektronische opdracht van de ene partij en de elektronisch ontvangen resultaten van de andere partij.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SamplingAssignmentType">
+		<complexContent>
+			<extension base="immetingen:OrderType">
+				<sequence>
+					<element name="oppositeSampleYN" type="boolean" minOccurs="0">
+						<annotation>
+							<documentation>contraMonsterJN - Geeft aan of er nog een ander monster parallel aan dezelfde bemonstering is geanalyseerd, door bijvoorbeeld een ander lab. Deze entiteit wordt meestal toegepast door fiscale zaken of handhavers.</documentation>
+						</annotation>
+					</element>
+					<element name="researchType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>soortOnderzoek - geeft aan wat voor soort onderzoek het betreft. Is informatie voor de klant ten behoeve van trendanalyses of rapportages.
+Domeintabel: Onderzoekssoort</documentation>
+						</annotation>
+					</element>
+					<element name="remarkClient" type="string" minOccurs="0">
+						<annotation>
+							<documentation>opmerkingOpdrachtgever - Is een aanvullend kenmerk opgegeven door klant, die de klant op het rapport vermeld wil zien. In de praktijk is dit meestal een toelichting op het monster of monsterlocatie die van belang is voor de eigen administratie of iets zegt over de omstandigheden waarin het monster is genomen. Bijv. ‘waswater uit overloop na bezinksloot’.</documentation>
+						</annotation>
+					</element>
+					<element name="reportReceiver" type="string" minOccurs="0">
+						<annotation>
+							<documentation>rapportageOntvanger - Naam van een persoon, personen, organisatie(s), afdeling(en), of een combinatie hiervan, voor wie de analyseresultaten bestemd zijn.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SamplingAssignmentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:SamplingAssignment"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SamplingProcess" type="immetingen:SamplingProcessType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="SamplingProcessType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="samplingDevice" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Bemonsteringsapparaat. De beschrijving van het soort apparaat waarmee de monstername in het veld is uitgevoerd.
+Domeintabel: BemonsteringsApparaat</documentation>
+						</annotation>
+					</element>
+					<element name="samplingMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Bemonsterings methode; nadere aanduiding van de wijze waarop het monster is genomen.
+Domeintabel: Bemonsteringsmethode</documentation>
+						</annotation>
+					</element>
+					<element name="samplingProcessingMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Domeintabel: Waardebepalingsmethode</documentation>
+						</annotation>
+					</element>
+					<element name="samplingType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Bemonsteringssoort - De techniek waarmee de bemonstering wordt uitgevoerd.
+Domeintabel: Bemonsteringssoort</documentation>
+						</annotation>
+					</element>
+					<element name="samplingOperator" type="immetingen:SubjectPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SamplingProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:SamplingProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Subject" type="immetingen:SubjectType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Contactgegevens email, fax, telnr., tel. Mobiel en opmerking</documentation>
+		</annotation>
+	</element>
+	<complexType name="SubjectType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="email" type="string" minOccurs="0">
+						<annotation>
+							<documentation>emailadres</documentation>
+						</annotation>
+					</element>
+					<element name="fax" type="string" minOccurs="0">
+						<annotation>
+							<documentation>faxnummer</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="mobileNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>mobiel nummer</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>opmerking</documentation>
+						</annotation>
+					</element>
+					<element name="telephoneNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>telefoonnummer</documentation>
+						</annotation>
+					</element>
+					<element name="relatedSubject" type="immetingen:SubjectFeatureComplexPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="Addresses" type="immetingen:AddressPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SubjectPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:Subject"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SubjectFeatureComplex" type="immetingen:SubjectFeatureComplexType" substitutionGroup="gml:AbstractGML"/>
+	<complexType name="SubjectFeatureComplexType">
+		<complexContent>
+			<extension base="gml:AbstractGMLType">
+				<sequence>
+					<element name="role" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>De rol van het ene subject tot het andere. Betrokkenen (subject 2) kunnen bijv. Projectleider zijn van een Organisatie (subject 1).
+Domeintabel: RelatedSubjectRollen</documentation>
+						</annotation>
+					</element>
+					<element name="relatedSubject">
+						<annotation>
+							<documentation>domeintabel: GerelateerdeSubjectRol</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence minOccurs="0">
+										<element ref="immetingen:Subject"/>
+									</sequence>
+									<attributeGroup ref="gml:AssociationAttributeGroup"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SubjectFeatureComplexPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:SubjectFeatureComplex"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="TestingConclusion" type="immetingen:TestingConclusionType" substitutionGroup="immetingen:Observation">
+		<annotation>
+			<documentation>Toetsoordeel
+Een toetsoordeel over een analyse.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TestingConclusionType">
+		<complexContent>
+			<extension base="immetingen:ObservationType">
+				<sequence/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TestingConclusionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="immetingen:TestingConclusion"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="TimeResult" type="immetingen:TimeResultType" substitutionGroup="immetingen:Result"/>
+	<complexType name="TimeResultType">
+		<complexContent>
+			<extension base="immetingen:ResultType">
+				<sequence>
+					<element name="startTime" type="dateTime">
+						<annotation>
+							<documentation>beginTijd</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>eindTijd</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TimeResultPropertyType">
+		<sequence>
+			<element ref="immetingen:TimeResult"/>
+		</sequence>
+	</complexType>
+	<element name="Validation" type="immetingen:ValidationType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>deze DataKlasse bevat optionele attributen en geeft weer welke validatiestappen de measureResult (meetwaarde) heeft gehad.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ValidationType">
+		<sequence>
+			<element name="automatedControl" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>de eerste-lijns controle is een vaak geautomatiseerde controle of de meetwaarde correct is. Het maakt gebruik van een domeintabel: ValidationSteps. Er zijn verschillende stappen te onderscheiden. Zo behoort een controle op harde/zachte grenzen, ionenbalans, bandbreedte en opgelost is niet hoger dan totaalanalyse (chemie) binnen de 1e-lijnscontrole. De controle kan goed- of afgekeurd zijn (zie kwaliteitsoordeel). In een domeintabel Validationsteps worden de verschillende mogelijke waarden beschreven. Voorbeeld: pH van 78 en watertemperatuur van 123 graden celcius zijn harde grenzen (niet mogelijk); pH=10,0 is een zachte grens omdat de waarde extreem hoog is (maar niet onmogelijk).
+Domeintabel: ValidationSteps</documentation>
+				</annotation>
+			</element>
+			<element name="expertControl" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>de tweede-lijns controle (ExpertControl) is een vaak specialistische controle of de meetwaarde correct is. Het maakt gebruik van een domeintabel: ValidationSteps. Ook hier zijn verschillende stappen te onderscheiden. Deze analyse volgt meestal niet direct na binnenkomst maar periodiek. Zo behoort een controle op correlatie tussen meetstations, historie, correlaties tussen parameters en specialistische vakkennis tot de 2e-lijnscontrole. De controle kan goed- of afgekeurd zijn (zie kwaliteitsoordeel). In de  domeintabel Validationsteps worden de verschillende mogelijke waarden beschreven. 
+Domeintabel: ValidationSteps</documentation>
+				</annotation>
+			</element>
+			<element name="validationScore" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>score van de gevolgde validatiestappen, conform de STOWA protocollen. Het attribuut maakt gebruik van de domeintabel ValidationScore. De waarde van de score valt tussen 0 en 5. 
+Domeintabel: ValidationScore</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="ValidationPropertyType">
+		<sequence>
+			<element ref="immetingen:Validation"/>
+		</sequence>
+	</complexType>
+</schema>

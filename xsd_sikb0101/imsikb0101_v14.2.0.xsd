@@ -1,0 +1,2828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:immetingen="http://www.sikb.nl/immetingen" xmlns:imsikb0101="http://www.sikb.nl/imsikb0101" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" targetNamespace="http://www.sikb.nl/imsikb0101" elementFormDefault="qualified">
+	<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
+	<import namespace="http://www.sikb.nl/immetingen" schemaLocation="immetingen_v14.2.0.xsd"/>
+	<!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+	<element name="FeatureCollectionIMSIKB0101" substitutionGroup="gml:AbstractGML">
+		<complexType>
+			<complexContent>
+				<extension base="imsikb0101:FeatureCollectionIMSIKB0101"/>
+			</complexContent>
+		</complexType>
+	</element>
+	<complexType name="FeatureCollectionIMSIKB0101">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="metaData" type="imsikb0101:MetaInformationType"/>
+					<sequence minOccurs="0" maxOccurs="unbounded">
+						<element name="featureMember">
+							<complexType>
+								<sequence>
+									<element ref="gml:AbstractFeature"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="MetaInformationType">
+		<sequence>
+			<element name="application" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>De naam van de applicatie waarmee het bestand is gemaakt om de bodeminformatie van de locatie digitaal uit te wisselen. - applicatie - applicatie_id</documentation>
+				</annotation>
+			</element>
+			<element name="database" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>De soort database waarin de bodeminformatie is opgeslagen. - database - database_id</documentation>
+				</annotation>
+			</element>
+			<element name="date" type="date" minOccurs="0">
+				<annotation>
+					<documentation>De datum waarop het bestand is gegenereerd. - datum</documentation>
+				</annotation>
+			</element>
+			<element name="organisation" type="string" minOccurs="0">
+				<annotation>
+					<documentation>De naam van de leverancier die het bestand heeft geleverd waarin de bodeminformatie is opgeslagen. Dit veld wordt niet gebruikt bij de updatesystematiek tijdens het uitwisselen van bodeminformatie tussen gegevensbeheerders. - organisatie</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>aanvullende informatie over het uitwisselbestand - opmerking</documentation>
+				</annotation>
+			</element>
+			<element name="reportDate" type="date" minOccurs="0">
+				<annotation>
+					<documentation>- rapportagedatum</documentation>
+				</annotation>
+			</element>
+			<element name="sender" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>De identificatie van de partij die de bodeminformatie verzendt. Deze identificatie wordt gebruikt voor de updatesystematiek tijdens het uitwisselen vna bodeminformatie tussen gegevensbeheerders. - verzender - bronhouder_id</documentation>
+				</annotation>
+			</element>
+			<element name="supplier" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>De naam van de leverancier van de applicatie waarmee het bestand is gemaakt om de bodeminformatie digitaal uit te wisselen. - leverancier - leverancier_id</documentation>
+				</annotation>
+			</element>
+			<element name="version" type="string">
+				<annotation>
+					<documentation>Het versienummer van het IMSIKB0101-gegevensmodel. Dit nummer bevat het versienummer van de sikb-lookup.xml dat gevonden wordt in de attribuutversie van het element sikb.lookup. - versie</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<element name="Activity" type="imsikb0101:ActivityType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Activiteit - (Verdachte) activiteit waarop de locatie is onderzocht</documentation>
+		</annotation>
+	</element>
+	<complexType name="ActivityType">
+		<sequence>
+			<element name="appointed" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>benoemd - Als duidelijk is gebleken dat een bepaalde activiteit (kan worden teruggevonden in één of meerdere archieven) op een locatie heeft plaatsgevonden, dan kan de betreffende activiteit als 'benoemd' worden beoordeeld. Als in een bodemonderzoek een activiteit dat in een archief voorkomt niet is onderzocht, wordt deze als 'niet-benoemd' beoordeeld. Als een activiteit niet in een archief voorkomt maar uit een andere informatiebron (bijvoorbeeld mondelinge informatie) is onderzocht in een bodemonderzoek, dan wordt deze activiteit als 'per definitie' benoemd.
+codes.sikb.nl/0101/benoemd.xml</documentation>
+				</annotation>
+			</element>
+			<element name="endTime" type="gYear" minOccurs="0">
+				<annotation>
+					<documentation>Het jaar waarin de activiteit op de locatie is gestopt. Een eventuele code '8888' staat voor 'nog aanwezig'. Een eventuele code '9999' staat voor 'onbekend'.</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="investigated" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Onderzocht - Als een activiteit, waarbij bodemverontreiniging kan ontstaan, voldoende is onderzocht staat hier de optie 'Ja'. In alle andere situaties staat hier 'Nee'.
+codes.sikb.nl/0101/ubi_onderzocht.xml</documentation>
+				</annotation>
+			</element>
+			<element name="emergencyCausing" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>spoedveroorzakend - Deze activiteit is de belangrijkste spoed-veroorzakende activiteit op deze locatie 
+
+http://codes.sikb.nl/0101/spoedveroorzakend.xml</documentation>
+				</annotation>
+			</element>
+			<element name="startTime" type="gYear" minOccurs="0">
+				<annotation>
+					<documentation>Het jaar waarin de activiteit op de locatie is gestart. Een eventuele code '9999' staat voor 'onbekend'.</documentation>
+				</annotation>
+			</element>
+			<element name="UBI" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Een ubi (Uniforme Bron Index) is een code voor een bepaalde (bedrijfsmatige) activiteit die de bodem kan verontreinigen. Op een locatie kunnen meerdere ubicodes voorkomen.
+codes.sikb.nl/0101/ubicode.xml</documentation>
+				</annotation>
+			</element>
+			<element name="expired" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>vervallen - Als duidelijk is gebleken dat een bepaalde activiteit (kan worden teruggevonden in één of meerdere archieven of komt voor in een bodemonderzoeksrapport) nooit op de locatie aanwezig is geweest of de omschrijving van de activiteit niet juist is, dan kan de betreffende activiteit als 'vervallen' worden beschouwd. 
+codes.sikb.nl/0101/vervallen.xml</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Opmerkingen</documentation>
+				</annotation>
+			</element>
+			<element name="contaminated" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Verontreinigd.
+http://codes.sikb.nl/0101/verontreinigd.xml</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="ActivityPropertyType">
+		<sequence>
+			<element ref="imsikb0101:Activity"/>
+		</sequence>
+	</complexType>
+	<element name="AddressLocation" type="imsikb0101:AddressLocationType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Adres lokatie
+Op basis van een archiefinventarisatie zijn aanwijzigen gevonden dat op de enkelvoudige adreslocatie activiteiten aanwezig zijn geweest die de bodem hebben kunnen verontreinigen. De geïnventariseerde gegevens zijn in het historisch bodembestand (HBB) geregistreerd</documentation>
+		</annotation>
+	</element>
+	<complexType name="AddressLocationType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="bioID" type="string">
+						<annotation>
+							<documentation>Een unieke code voor de enkelvoudige adreslocatie uit het historisch bodembestand. De code wordt automatisch door het bodeminformatiesysteem aangemaakt en als volgt vormgegeven: 'A + geografische aanduiding (4) (gem_code) + uniek volgnummer binnen beheersgebied (6))</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="AddressLocationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:AddressLocation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="AnalysisPackage" type="imsikb0101:AnalysisPackageType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Analyse pakket
+naam van het pakket met metingen die uitgevoerd moeten worden in het laboratorium</documentation>
+		</annotation>
+	</element>
+	<complexType name="AnalysisPackageType">
+		<sequence>
+			<element name="analysisPackageCode" type="string">
+				<annotation>
+					<documentation>analyse(pakket)code, laboratorium afhankelijk</documentation>
+				</annotation>
+			</element>
+			<element name="description" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Omschrijving van het pakket</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AnalysisPackagePropertyType">
+		<sequence>
+			<element ref="imsikb0101:AnalysisPackage"/>
+		</sequence>
+	</complexType>
+	<element name="AsbestosComposition" type="imsikb0101:AsbestosCompositionType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Asbest toevoeging
+Samenstelling van het asbest houdende monster</documentation>
+		</annotation>
+	</element>
+	<complexType name="AsbestosCompositionType">
+		<sequence>
+			<element name="asbestosContainingMaterial" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Asbesthoudend materiaal - Het materiaal waaruit dit asbest monster bestaat. 
+Domeintabel: AsbesthoudendMateriaal</documentation>
+				</annotation>
+			</element>
+			<element name="asbestosFractionCode" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>AsbestFractie - Fractiegrootte van het monster. 
+Domeintabel: Hoedanigheid (groep: Asbestfractie)</documentation>
+				</annotation>
+			</element>
+			<element name="massFraction" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>massa fractie - Totale massa van de fractie</documentation>
+				</annotation>
+			</element>
+			<element name="massParticles" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>massa deeltjes - Massa van de gevonden asbesthoudende deeltjes van een fractiegrootte</documentation>
+				</annotation>
+			</element>
+			<element name="particlesCount" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>aantal deeltjes - Het aantal deeltjes dat in een fractiegrootte is aangetroffen</documentation>
+				</annotation>
+			</element>
+			<element name="bondedType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Hechtgebonden - De vezels van het materiaal zijn hechtgebonden of niet hechtgebonden.
+Domeintabel: HechtgebondenheidAsbest</documentation>
+				</annotation>
+			</element>
+			<element name="searchedPart" type="double" minOccurs="0">
+				<annotation>
+					<documentation>afgezocht deel - Het afgezochte deel van de fractiegrootte in percentage</documentation>
+				</annotation>
+			</element>
+			<element name="searchedPartDescription" type="string" minOccurs="0">
+				<annotation>
+					<documentation>afgezocht deel omschrijving - Toelichting op het afgezochte deel van de fractiegrootte</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AsbestosCompositionPropertyType">
+		<sequence>
+			<element ref="imsikb0101:AsbestosComposition"/>
+		</sequence>
+	</complexType>
+	<element name="Attachment" type="imsikb0101:AttachmentType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Bijlage
+Overzicht digitaal meegestuurde bijlagen</documentation>
+		</annotation>
+	</element>
+	<complexType name="AttachmentType">
+		<sequence>
+			<element name="attachmentType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>soort / soort bijlage - Beschrijving soort bijlage
+Domeintabel: BijlageType</documentation>
+				</annotation>
+			</element>
+			<element name="fileName" type="string" minOccurs="0">
+				<annotation>
+					<documentation>bestandsnaam - Volledige bestandsnaam van de bijlage</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="AttachmentPropertyType">
+		<sequence>
+			<element ref="imsikb0101:Attachment"/>
+		</sequence>
+	</complexType>
+	<element name="BoToVaSpecific" type="imsikb0101:BoToVaSpecificType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Specifiek voor BoToVa extra velden bij een Toetsoordeel.</documentation>
+		</annotation>
+	</element>
+	<complexType name="BoToVaSpecificType">
+		<sequence>
+			<element name="isSampleConclusion" type="boolean">
+				<annotation>
+					<documentation>Is het een conclusie over het hele monster dan TRUE, als het een conlcusie is over individuele parameters dan FALSE.</documentation>
+				</annotation>
+			</element>
+			<element name="testingMessageCode" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+				<annotation>
+					<documentation>Code van de melding van BoToVa, dit moeten codes zijn ivm vertalingen naar spaans voor de labs.
+Domeintabel: Toetsmeldingen</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="BoToVaSpecificPropertyType">
+		<sequence>
+			<element ref="imsikb0101:BoToVaSpecific"/>
+		</sequence>
+	</complexType>
+	<element name="BoreProcess" type="imsikb0101:BoreProcessType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="BoreProcessType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="drillType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>aanduiding van het apparaat waarmee de boring is uitgevoerd.
+Domeintabe: BemonsteringsApparaat</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="fieldworkOperator" type="immetingen:SubjectPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>- Boormeester en veldwerkbedrijf welke geboord hebben</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BoreProcessPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:BoreProcess"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Borehole" type="imsikb0101:BoreholeType" substitutionGroup="imsikb0101:Plot">
+		<annotation>
+			<documentation>&lt;b&gt;borehole&lt;/b&gt;
+&lt;b&gt;Synonyms: boring and bore&lt;/b&gt;
+penetration into the  subsurface with removal of soil/rock material by using e. g. a hollow tube-shaped tool
+Note 1: Generally, it is a vertical penetration. 
+Note 2: For the purpose of this International standard, the term borehole is used.</documentation>
+		</annotation>
+	</element>
+	<complexType name="BoreholeType">
+		<complexContent>
+			<extension base="imsikb0101:PlotType">
+				<sequence>
+					<element name="isSuccessful" type="boolean" minOccurs="0">
+						<annotation>
+							<documentation>Is boring geslaagd?</documentation>
+						</annotation>
+					</element>
+					<element name="situationDescription" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Beschrijving situatie ter plekke van meetpunt.
+Domeintabel: SituatieBeschrijving</documentation>
+						</annotation>
+					</element>
+					<element name="depth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Diepte van het meetpunt</documentation>
+						</annotation>
+					</element>
+					<element name="groundLevel" type="immetingen:HeightPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>maaiveldHoogte - hoogteligging van het maaiveld ten opzichte van het referentievlak</documentation>
+						</annotation>
+					</element>
+					<element name="groundLevelType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Beschrijving van het maaiveld ter plekke van het meetpunt.
+Domeintabel: MaaiveldType</documentation>
+						</annotation>
+					</element>
+					<element name="drillMaster" type="immetingen:SubjectPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="BoreholePropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Borehole"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="ContaminationInformation" type="imsikb0101:ContaminationInformationType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>VerontreinigingsInformatie - Verontreinigingsbereik vastgesteld door de overheid door middel van een nader onderzoek in het kader van de WBB</documentation>
+		</annotation>
+	</element>
+	<complexType name="ContaminationInformationType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="area" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>oppervlakte - De oppervlakte van de verontreiniging (in vierkante meters).</documentation>
+						</annotation>
+					</element>
+					<element name="contourType" type="gml:CodeType">
+						<annotation>
+							<documentation>Aanduiding van de bodem matrix waarin de verontreiniging is vastgesteld - contour
+codes.sikb.nl/0101/contour.xml</documentation>
+						</annotation>
+					</element>
+					<element name="dataAdministrator" type="gml:CodeType">
+						<annotation>
+							<documentation>bronhouder/ gegevensbeheerder - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: Bronhouders</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>Datum contour beeindigd</documentation>
+						</annotation>
+					</element>
+					<element name="exceededClass" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>overschrijdingsklasse - De overschrijding geeft aan:
+- welke toetsingswaarde uit de Wet bodembescherming in de verontreinigingscontour voor grond en/of grondwater overschreden wordt (streefwaarde, tussenwaarde, interventiewaarde); of
+- tot welke klasse de waterbodem (baggerspecie) beoordeeld is volgens de 4e Nota waterbodems; of
+- welke maximale waarde uit het Besluit bodemkwaliteit wordt overschreden (achtergrondwaarde, wonen of industrie) zoals die door de gemeente is vastgesteld in de (water)bodemkwaliteitskaart of de bodemfunctieklassenkaart.
+
+codes.sikb.nl/0101/overschrijding.xml</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Geometrie (begrenzing) van het verontreinigde gebied.
+Mag alleen GM_Point of GM_MultiPolygon zijn.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="lowerDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>onderkant - onderkant van de verontreinigingscontour in meters ten opzichte van het referentievlak</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>Datum contour opgevoerd</documentation>
+						</annotation>
+					</element>
+					<element name="upperDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>bovenkant - bovenkant van de verontreinigingscontour in meters ten
+opzichte van het referentievlak</documentation>
+						</annotation>
+					</element>
+					<element name="volume" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>volume - De hoeveelheid verontreiniging (in kubieke  meters).</documentation>
+						</annotation>
+					</element>
+					<element name="project" type="imsikb0101:ProjectPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:contaminationInfo</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="natures" type="imsikb0101:NaturePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ContaminationInformationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:ContaminationInformation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Cost" type="imsikb0101:CostType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Kosten</documentation>
+		</annotation>
+	</element>
+	<complexType name="CostType">
+		<sequence>
+			<element name="amount" type="double" minOccurs="0">
+				<annotation>
+					<documentation>bedrag - De totale kosten in euro's, inclusief BTW.</documentation>
+				</annotation>
+			</element>
+			<element name="determinationMethod" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>bepalingsWijze - status - Geeft aan of de kosten zijn geschat of zijn gebaseerd op werkelijke besteding.
+
+codes.sikb.nl/0101/kostenstatus.xml</documentation>
+				</annotation>
+			</element>
+			<element name="concerns" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>betreft - Geeft aan of de kosten betrekking hebben op onderzoek of sanering.
+
+http://codes.sikb.nl/0101/kostenindeling.xml</documentation>
+				</annotation>
+			</element>
+			<element name="startTime" type="date" minOccurs="0">
+				<annotation>
+					<documentation>datum - De datum waarop de kosten meegerekend moeten worden voor de beleidsrapportage.</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="endTime" type="date" minOccurs="0">
+				<annotation>
+					<documentation>datum - De datum waarop de kosten niet meer meegerekend moeten worden voor de beleidsrapportage.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="CostPropertyType">
+		<sequence>
+			<element ref="imsikb0101:Cost"/>
+		</sequence>
+	</complexType>
+	<element name="CurrentUsage" type="imsikb0101:CurrentUsageType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Het (beoogde) landgebruik</documentation>
+		</annotation>
+	</element>
+	<complexType name="CurrentUsageType">
+		<sequence>
+			<element name="landuseType" type="gml:CodeType">
+				<annotation>
+					<documentation>Aanduiding van het huidige, feitelijke gebruik van de locatie
+
+http://codes.sikb.nl/0101/gebruik.xml</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType" minOccurs="0">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="coveragePercentage" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>dekkingpercentage</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>opmerkingen</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="CurrentUsagePropertyType">
+		<sequence>
+			<element ref="imsikb0101:CurrentUsage"/>
+		</sequence>
+	</complexType>
+	<element name="Decision" type="imsikb0101:DecisionType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Besluit van bevoegd gezag (bevoegd in het kader van de WBB)</documentation>
+		</annotation>
+	</element>
+	<complexType name="DecisionType">
+		<sequence>
+			<element name="characteristic" type="string" minOccurs="0">
+				<annotation>
+					<documentation>kenmerk - Het kenmerk van het document of de brief die hoort bij het besluit dat door het bevoegd gezag Wet bodembescherming (een provincie of gemeente) is gegeven.</documentation>
+				</annotation>
+			</element>
+			<element name="dataAdministrator" type="gml:CodeType">
+				<annotation>
+					<documentation>gegevensbeheerder/bronhouder - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: Bronhouders</documentation>
+				</annotation>
+			</element>
+			<element name="decisionType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>bsl_code - Een besluit dat door het bevoegd gezag Wet bodembescherming (een provincie of een gemeente) is genomen over welke actie (administratief of uitvoerend) verricht moet worden voor:
+- een locatie waarvan de bodem (mogelijk) gesaneerd is of moet worden;
+- een locatie, waar een bodemsanering heeft plaatsgevonden, beheerd moet worden.
+
+codes.sikb.nl/0101/besluit.xml</documentation>
+				</annotation>
+			</element>
+			<element name="endTime" type="date" minOccurs="0">
+				<annotation>
+					<documentation>De datum die is genoemd tot wanneer het besluit van kracht is.</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="startTime" type="date" minOccurs="0">
+				<annotation>
+					<documentation>bsl_dat - De datum die is genoemd in het document of de brief wanneer het besluit, dat door het bevoegd gezag Wet bodembescherming (een provincie of gemeente) is gegeven, van kracht is geworden.</documentation>
+				</annotation>
+			</element>
+			<element name="statusOfDecision" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>bsl_stat - De status van een besluit dat door het bevoegd gezag Wet bodembescherming (een provincie of een gemeente) is genomen over welke actie (administratief of uitvoerend) verricht moet worden voor:
+- een locatie waarvan de bodem (mogelijk) gesaneerd is of moet worden;
+- een locatie, waar een bodemsanering heeft plaatsgevonden, beheerd moet worden.
+
+codes.sikb.nl/0101/besl_stat.xml</documentation>
+				</annotation>
+			</element>
+			<element name="documents" type="imsikb0101:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="registrations" type="imsikb0101:RegistrationWKPBPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="contaminationInfos" type="imsikb0101:ContaminationInformationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="sitemanagements" type="imsikb0101:SitemanagementMeasurePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="remediations" type="imsikb0101:RemediationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<complexType name="DecisionPropertyType">
+		<sequence>
+			<element ref="imsikb0101:Decision"/>
+		</sequence>
+	</complexType>
+	<element name="DestinationAfterRemediation" type="imsikb0101:DestinationAfterRemediationType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>BestemmingNaSanering</documentation>
+		</annotation>
+	</element>
+	<complexType name="DestinationAfterRemediationType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="destinationType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Bestemming - aanduiding van de bestemming na sanering - gebruik
+codes.sikb.nl/0101/gebruik.xml</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DestinationAfterRemediationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:DestinationAfterRemediation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Document" type="imsikb0101:DocumentType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>In de praktijk is men erg geinteresseerd naar digitale documenten van de uitgevoerde onderzoeken en de genomen besluiten.</documentation>
+		</annotation>
+	</element>
+	<complexType name="DocumentType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="documentID" type="string">
+						<annotation>
+							<documentation>Kenmerk van het document waaronder die bekend is bij desbetreffende organisatie.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="date">
+						<annotation>
+							<documentation>Datum waarop het document opgesteld is.</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>Datum waarop het document verwijderd is.</documentation>
+						</annotation>
+					</element>
+					<element name="title" type="string">
+						<annotation>
+							<documentation>Title van het document.</documentation>
+						</annotation>
+					</element>
+					<element name="ownerOrganisation" type="gml:CodeType">
+						<annotation>
+							<documentation>eigenaar - De overheidsinstantie die de gegevensbeheerder van dit element is, tevens de organisatie die het document heeft opgeslagen.
+Domeintabel: &lt;font color="#993300"&gt;Bronhouders&lt;/font&gt;</documentation>
+						</annotation>
+					</element>
+					<element name="documentLink" type="anyURI">
+						<annotation>
+							<documentation>Link naar het online  document.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DocumentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Document"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Dossier" type="imsikb0101:DossierType" substitutionGroup="imsikb0101:SoilManagementDossier">
+		<annotation>
+			<documentation>Informatie over de status van de locatie door de overheid in het kader van de WBB vastgesteld</documentation>
+		</annotation>
+	</element>
+	<complexType name="DossierType">
+		<complexContent>
+			<extension base="imsikb0101:SoilManagementDossierType">
+				<sequence>
+					<element name="careMeasureStatus" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>stat_maatr - Het type zorgmaatregel dat is genomen voor de bodemverontreiniging - zorg_c
+codes.sikb.nl/0101/zorg.xml</documentation>
+						</annotation>
+					</element>
+					<element name="conclusion" type="string" minOccurs="0">
+						<annotation>
+							<documentation>algmene conclusies met betrekking tot de locatie</documentation>
+						</annotation>
+					</element>
+					<element name="covenantOrganisation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>convenantpartij - Een specificering van de partij die op basis van het convenant bijdraagt aan de uitvoering van een bodemonderzoek of sanering op de locatie - convenantpartij
+codes.sikb.nl/0101/convenantpartij.xml</documentation>
+						</annotation>
+					</element>
+					<element name="dataAdministrator" type="gml:CodeType">
+						<annotation>
+							<documentation>Bronhouder/bevoegd gezag - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: Bronhouders</documentation>
+						</annotation>
+					</element>
+					<element name="dossierIdLocalAuthority" type="string" minOccurs="0">
+						<annotation>
+							<documentation>locatieIdBevoegdGezag: dossierIdBevoegdGezag - Een unieke locatiecode die door het bevoegd gezag van de Wet bodembescherming wordt afgegeven. De code wordt als volgt vormgegeven: ((2 letters) + geografische aanduiding (4) (gem_code) + uniek volgnummer binnen beheersgebied (5))</documentation>
+						</annotation>
+					</element>
+					<element name="dossierIdNotLocalAuthority" type="string" minOccurs="0">
+						<annotation>
+							<documentation>locatieIdNietBevoegdGezag: DossierIdNietBevoegdGezag - 
+Een unieke code binnen het BIS die wordt aangemaakt als een locatie voor het eerst in dat BIS wordt geregistreerd. De code wordt als volgt vormgegeven: (code bissysteem (2 letters) + geografische aanduiding (4) (gem_code) + uniek volgnummer binnenbeheersgebied (5))</documentation>
+						</annotation>
+					</element>
+					<element name="followUpWBB" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>vervolgActieWBB - De uit te voeren vervolgactie in het kader van de Wet bodembescherming.
+
+codes.sikb.nl/0101/vervolg.xml</documentation>
+						</annotation>
+					</element>
+					<element name="initiator" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>initiatiefnemer - De partij die de uitvoering van een bodemonderzoek of sanering (deels) financieert.
+
+
+http://codes.sikb.nl/0101/initiatief.xml</documentation>
+						</annotation>
+					</element>
+					<element name="landOrWater" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>De bodeminformatie van de locatie heeft betrekking op de grond of de waterbodem (baggerspecie).
+
+codes.sikb.nl/0101/landwater.xml</documentation>
+						</annotation>
+					</element>
+					<element name="pollutionStartedBefore1987" type="boolean" minOccurs="0">
+						<annotation>
+							<documentation>voor1987Ontstaan - Deze aanduidig geeft aan of er al dan niet sprake is van een zorgplichtlocatie. Als een bodemverontreiniging (grotendeels) is ontstaan na 1 januari 1987 gaat het om een zorgplichtlocatie. De eventueel ontstane bodemverontreiniging moet volledig verwijderd worden.</documentation>
+						</annotation>
+					</element>
+					<element name="rapporteurMonitoring" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>rapporteurMonitoring - De partij die de bodeminformatie van deze locatie rapporteert in het kader van de (landelijke) beleidsmonitoring
+
+Domeintabel: codes.sikb.nl/0101/lettercode_bevoegd_gezag.xml</documentation>
+						</annotation>
+					</element>
+					<element name="remediationHasSocialReason" type="boolean" minOccurs="0">
+						<annotation>
+							<documentation>heeftSaneringMaatschappelijkeReden - De aanduiding of een bodemsaneringsverplichting al dan niet is ontstaan door een ruimtelijke of maatschappelijke reden (bouwplannen, functieverandering van de locatie - een dynamische locatie). In alle andere situatie is sprak van een statische locatie.</documentation>
+						</annotation>
+					</element>
+					<element name="statusAsbestos" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>statusAsbest - De verdachtheid op of het voorkomen van asbest op de locatie op basis van uitgevoerd (historisch) onderzoek of beschikbaar kaartmateriaal. Dit veld vervangt niet het asbest veld bij onderzoeken
+
+codes.sikb.nl/0101/asbest_status.xml</documentation>
+						</annotation>
+					</element>
+					<element name="statusOnBasisOfInvestigation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>statusOpBasisVanOnderzoeken - De meest actuele verontreinigingstatus van de locatie op basis van de aanwezige (onderzoeks)informatie zolang er geen beschikking is afgegeven door het bevoegd gezag Wet bodembescherming. Status_oord
+
+codes.sikb.nl/0101/status_oord.xml</documentation>
+						</annotation>
+					</element>
+					<element name="documents" type="imsikb0101:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="stakeholders" type="immetingen:SubjectPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="sourceSystems" type="imsikb0101:SourceSystemPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="decisions" type="imsikb0101:DecisionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="sitemanagements" type="imsikb0101:SitemanagementMeasurePropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>zorgMaatregel</documentation>
+						</annotation>
+					</element>
+					<element name="researchCosts" type="imsikb0101:CostPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="usages" type="imsikb0101:CurrentUsagePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="risks" type="imsikb0101:RiskPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="activities" type="imsikb0101:ActivityPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="destinations" type="imsikb0101:DestinationAfterRemediationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="contaminationInfos" type="imsikb0101:ContaminationInformationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="remediations" type="imsikb0101:RemediationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="DossierPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Dossier"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="ExecutedTesting" type="imsikb0101:ExecutedTestingType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Uitgevoerde Toetsing
+Een uitgevoerde toetsing mag maar bij 1 monster horen, ivm de instellingen en gehanteerd Lutum bijvoorbeeld.
+Dus als 3 monsters in 1 aanroep getoets zijn, dan krijg je een 4e monster. In de XML komen dan 4 UitgevoerdeToetsingen voor!</documentation>
+		</annotation>
+	</element>
+	<complexType name="ExecutedTestingType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="testingType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Type toetsing welke is uitgevoerd. Is een codelijst van BoToVa.
+Domeintabel: Toetsingen</documentation>
+						</annotation>
+					</element>
+					<element name="testingVersion" type="gml:CodeType">
+						<annotation>
+							<documentation>Het versienummer van de toetsing die uitgevoerd is door en bekend is bij BoToVa.
+domeintabel: normgroep</documentation>
+						</annotation>
+					</element>
+					<element name="dateTimeTesting" type="dateTime">
+						<annotation>
+							<documentation>Datum en tijd waarop de toetsing is uitgevoerd.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="settings" type="imsikb0101:TestingVariabelePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="organicMatter" type="immetingen:CalculatedAnalysisPropertyType" minOccurs="0"/>
+					<element name="lutum" type="immetingen:CalculatedAnalysisPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ExecutedTestingPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:ExecutedTesting"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Filter" type="imsikb0101:FilterType" substitutionGroup="immetingen:MeasurementObject">
+		<annotation>
+			<documentation>permeabel bereik van een peilbuis waaruit één of meer veldmonsters worden genomen</documentation>
+		</annotation>
+	</element>
+	<complexType name="FilterType">
+		<complexContent>
+			<extension base="immetingen:MeasurementObjectType">
+				<sequence>
+					<element name="upperDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Bovenkant filter</documentation>
+						</annotation>
+					</element>
+					<element name="lowerDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>OnderkantFilter</documentation>
+						</annotation>
+					</element>
+					<element name="heightTopFiltertube" type="immetingen:HeightPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Hoogte bovenkant van de peilbuis "boven het maaiveld"</documentation>
+						</annotation>
+					</element>
+					<element name="filtertubeDiameter" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>Diameter van de peilbuis</documentation>
+						</annotation>
+					</element>
+					<element name="filtertubeLength" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>Totale lengte van de peilbuis</documentation>
+						</annotation>
+					</element>
+					<element name="filtertubeMaterial" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Materiaal waarvan de peilbuis gemaakt is.</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="FilterPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Filter"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Finishing" type="imsikb0101:FinishingType" substitutionGroup="imsikb0101:ProfileElement">
+		<annotation>
+			<documentation>Afwerking van een boorgat; wat kan bestaan uit een aanvulling, afdichting of generieke afwerking.
+
+Dit is een profileElement, omdat deze gelaagd als lagen kunnen worden aangebracht.
+
+Aanvulling: Naast een filter in een boorgat.
+Afdichting: Bij de opening van het boorgat.
+Afwerking: Overige afwerkingen van een boorgat.</documentation>
+		</annotation>
+	</element>
+	<complexType name="FinishingType">
+		<complexContent>
+			<extension base="imsikb0101:ProfileElementType">
+				<sequence>
+					<element name="finishingMaterial" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Het materiaal waarmee dit gedeelte van de afwerking is afgewerkt. Afhankelijk van het Type komt hier een domeintabel, er is dus geen vaste tabel.
+Zie domeintabel: &lt;u&gt;AfwerkingType &lt;/u&gt;voor de juiste domeintabel. 
+(Aanvulling, Afdichting, Afwerking)</documentation>
+						</annotation>
+					</element>
+					<element name="finishingType" type="gml:CodeType">
+						<annotation>
+							<documentation>Afwerking soort: Afdichting, aanvulling, afwerking.
+Domeintabel: AfwerkingType</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="FinishingPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Finishing"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="GeographicPosition" type="imsikb0101:GeographicPositionType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Geografische positie
+geografische contour rondom het gebied</documentation>
+		</annotation>
+	</element>
+	<complexType name="GeographicPositionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="area" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>Oppervlakte</documentation>
+						</annotation>
+					</element>
+					<element name="height" type="immetingen:HeightPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>(gemiddelde) hoogte</documentation>
+						</annotation>
+					</element>
+					<element name="geoMeasureMethod" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>meetmethode/meetapparaat waarmee coordinaat is bepaald
+Domeintabel: PlaatsbepalingsMethode</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>De eventuele opmerking bij de identificatie van de (geografische) omlijning van de locatie</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>opmerkingen</documentation>
+						</annotation>
+					</element>
+					<element name="layerType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>laag type - Om wat voor soort laag het gaat zoals: insitu, opgebracht e.d.
+Domeintabel: BodemlaagType</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>begin tijd</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>eind tijd</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="GeographicPositionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:GeographicPosition"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="LabAssignment" type="imsikb0101:LabAssignmentType" substitutionGroup="gml:AbstractFeature"/>
+	<complexType name="LabAssignmentType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="operatingLab" type="gml:CodeType">
+						<annotation>
+							<documentation>Code van het laboratorium waaraan de opdracht is verstrekt.
+Domeintabel: Meetinstantie</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="dateTime">
+						<annotation>
+							<documentation>Verzenddatum labopdracht</documentation>
+						</annotation>
+					</element>
+					<element name="customerCode" type="string">
+						<annotation>
+							<documentation>Klantcode of debiteurnummer opdrachtgever zoals bekend bij laboratorium</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen bij een labopdracht</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>Verzenddatum definitieve labresultaten</documentation>
+						</annotation>
+					</element>
+					<element name="belongsToProject" type="imsikb0101:ProjectPropertyType">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:labassignments</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="analysisRequest" type="imsikb0101:SampleAnalysisRequestPropertyType" maxOccurs="unbounded"/>
+					<element name="projectLeader" type="immetingen:SubjectPropertyType"/>
+					<element name="reports" type="imsikb0101:LabReportPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="status" type="imsikb0101:LabAssignmentStatusPropertyType" minOccurs="0"/>
+					<element name="request" type="imsikb0101:LabAssignmentRequestPropertyType" minOccurs="0"/>
+					<element name="certificate" type="imsikb0101:LabAssignmentCertificatePropertyType" minOccurs="0"/>
+					<element name="delivery" type="imsikb0101:LabAssignmentDeliveryPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="LabAssignmentPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:LabAssignment"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="LabAssignmentCertificate" type="imsikb0101:LabAssignmentCertificateType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Labopdracht certificaat
+De velden die nodig zijn bij het terugkoppelen van een labopdracht om informatie over het certificaat mee te geven.</documentation>
+		</annotation>
+	</element>
+	<complexType name="LabAssignmentCertificateType">
+		<sequence>
+			<element name="complementOfCertificate" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Aanvulling Op - Certificaatnummer van een voorgaande opdracht</documentation>
+				</annotation>
+			</element>
+			<element name="labCertificateNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Certificaatnummer - IS het nummer van het certificaat zoals het lab deze genereert. Gaat alleen mee terug met Analyseresultaten</documentation>
+				</annotation>
+			</element>
+			<element name="certification" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Certificering - Aanduiding onder welke certificering/accreditatie de analyses uitgevoerd moeten worden.
+Domeintabel: Certificeringscode</documentation>
+				</annotation>
+			</element>
+			<element name="labCertificatePdfLink" type="anyURI" minOccurs="0">
+				<annotation>
+					<documentation>Bevat de link naar een pdf van het certificaat. Gaat alleen mee terug met Analyseresultaten</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="LabAssignmentCertificatePropertyType">
+		<sequence>
+			<element ref="imsikb0101:LabAssignmentCertificate"/>
+		</sequence>
+	</complexType>
+	<element name="LabAssignmentDelivery" type="imsikb0101:LabAssignmentDeliveryType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Labopdracht aflevering
+Alle velden die benodigd zijn bij het versturen van de labopdracht om aan te geven hoe de monsters zijn aangeleverd.</documentation>
+		</annotation>
+	</element>
+	<complexType name="LabAssignmentDeliveryType">
+		<sequence>
+			<element name="isPartialDelivery" type="boolean" minOccurs="0">
+				<annotation>
+					<documentation>Deellevering</documentation>
+				</annotation>
+			</element>
+			<element name="dateFirstPartialDelivery" type="dateTime" minOccurs="0">
+				<annotation>
+					<documentation>Datum eerste deellevering, indien het een deellevering betreft</documentation>
+				</annotation>
+			</element>
+			<element name="dateLastPartialDelivery" type="dateTime" minOccurs="0">
+				<annotation>
+					<documentation>Datum laatste deellevering, indien het een deellevering betreft</documentation>
+				</annotation>
+			</element>
+			<element name="samplesDate" type="date">
+				<annotation>
+					<documentation>Datum waarop de (deel)monsters zijn aangeleverd/overgedragen</documentation>
+				</annotation>
+			</element>
+			<element name="sampleDelivery" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Monsteraanlevering</documentation>
+				</annotation>
+			</element>
+			<element name="transportationNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>transportnummer - Nummer waaronder de veldmonsters zijn aangeleverd</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="LabAssignmentDeliveryPropertyType">
+		<sequence>
+			<element ref="imsikb0101:LabAssignmentDelivery"/>
+		</sequence>
+	</complexType>
+	<element name="LabAssignmentRequest" type="imsikb0101:LabAssignmentRequestType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Labopdracht Aanvraag
+Alle velden die betrekking hebben op de aanvraag van de labopdracht en de daarbij behorende administratie.</documentation>
+		</annotation>
+	</element>
+	<complexType name="LabAssignmentRequestType">
+		<sequence>
+			<element name="orderNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Door opdrachtgever gehanteerde ordernummer (gelijk aan idopdracht indien niet ingevuld, door opdrachtgever), dit nummer dient vermeld te worden op de factuur van het laboratorium gericht aan de opdrachtgever.</documentation>
+				</annotation>
+			</element>
+			<element name="urgencyCode" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Urgentie van de opdracht; Code, laboratorium afhankelijk</documentation>
+				</annotation>
+			</element>
+			<element name="reservationNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>ReserveringsNummer - Een door het laboratorium aan de opdrachtgever doorgegeven reserveringsnummer</documentation>
+				</annotation>
+			</element>
+			<element name="isAgreement" type="boolean" minOccurs="0">
+				<annotation>
+					<documentation>Indien er voor de opdracht een speciale afspraak met het lab gemaakt is (0=Nee; 1=Ja)</documentation>
+				</annotation>
+			</element>
+			<element name="agreementNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>afspraaknummer - Indien _Afspraak_ = _J_, kan hier het afspraaknr worden aangegeven, waarop de afspraak betrekking heeft</documentation>
+				</annotation>
+			</element>
+			<element name="storageTime" type="string" minOccurs="0">
+				<annotation>
+					<documentation>bewaarduur - Code, laboratorium afhankelijk</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="LabAssignmentRequestPropertyType">
+		<sequence>
+			<element ref="imsikb0101:LabAssignmentRequest"/>
+		</sequence>
+	</complexType>
+	<element name="LabAssignmentStatus" type="imsikb0101:LabAssignmentStatusType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Labopdracht status
+De status van de labopdracht wordt hierin bijgehouden bij het terugleveren van de Resultaten.</documentation>
+		</annotation>
+	</element>
+	<complexType name="LabAssignmentStatusType">
+		<sequence>
+			<element name="statusType" type="gml:CodeType">
+				<annotation>
+					<documentation>Status - is deze al definitief?
+Domeintabel: LabopdrachtStatus</documentation>
+				</annotation>
+			</element>
+			<element name="dateExpected" type="date">
+				<annotation>
+					<documentation>Datum waarop verwacht wordt definitief te worden.</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Opmerkingen bij een status</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="LabAssignmentStatusPropertyType">
+		<sequence>
+			<element ref="imsikb0101:LabAssignmentStatus"/>
+		</sequence>
+	</complexType>
+	<element name="LabReport" type="imsikb0101:LabReportType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Lab rapportage
+De mogelijkheid om aan te geven hoe het lab de rapportage van deze labopdracht moet leveren.</documentation>
+		</annotation>
+	</element>
+	<complexType name="LabReportType">
+		<sequence>
+			<element name="labReportType" type="string">
+				<annotation>
+					<documentation>Rapportage type - bijv. Standaard, AP04, OVAM, Ontvangstbevestiging</documentation>
+				</annotation>
+			</element>
+			<element name="shippingMethodCode" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Verzendwijze, dus Post, Fax, Email
+Domeintabel: Verzendwijze</documentation>
+				</annotation>
+			</element>
+			<element name="languageCode" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Taalcode volgens ISO 639-2 (dut=dutch, eng=english)</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="LabReportPropertyType">
+		<sequence>
+			<element ref="imsikb0101:LabReport"/>
+		</sequence>
+	</complexType>
+	<element name="Layer" type="imsikb0101:LayerType" substitutionGroup="imsikb0101:ProfileElement">
+		<annotation>
+			<documentation>&lt;b&gt;layer&lt;/b&gt;
+domain of a soil with a certain vertical extension developed through non-pedogenic processes, displaying an unconformity to possibly over- or underlying adjacent domains
+Note 1: In the framework of soils deeply modified by human activity, artificial layers may be due to different kinds of deposits (concrete, bricks, etc.). 
+Note 2: Layers may be part of a horizon.
+
+verticale uitsnede van de bodem ter plaatse van de boring met uniforme kenmerken en met een begin- en einddiepte</documentation>
+		</annotation>
+	</element>
+	<complexType name="LayerType">
+		<complexContent>
+			<extension base="imsikb0101:ProfileElementType">
+				<sequence>
+					<element name="description" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Beschrijving van de laag</documentation>
+						</annotation>
+					</element>
+					<element name="layerType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>laagsoort op basis van de herkomst van het materiaal.
+Domeintabel: BodemlaagType</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="LayerPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Layer"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Nature" type="imsikb0101:NatureType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Aard</documentation>
+		</annotation>
+	</element>
+	<complexType name="NatureType">
+		<sequence>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="physicalProperty" type="immetingen:PhysicalPropertyPropertyType">
+				<annotation>
+					<documentation>De code voor de stof (component) die de verontreiniging (mede) karakteriseert</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="NaturePropertyType">
+		<sequence>
+			<element ref="imsikb0101:Nature"/>
+		</sequence>
+	</complexType>
+	<element name="Notification" type="imsikb0101:NotificationType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Melding
+Melding voor de toepassing van een partij grond, baggerspecie of bouwstof in kader Besluit Bodemkwaliteit</documentation>
+		</annotation>
+	</element>
+	<complexType name="NotificationType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="versionNumber" type="integer">
+						<annotation>
+							<documentation>Versienummer van de melding</documentation>
+						</annotation>
+					</element>
+					<element name="dataAdministrator" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Bronhouder/gegevensbeheerder - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: Bronhouders</documentation>
+						</annotation>
+					</element>
+					<element name="notificationCode" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Kenmerk van de melding zoals bekend bij de melder</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen van de melder</documentation>
+						</annotation>
+					</element>
+					<element name="evoaNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Nummer verstrekt in kader Europese Verordening  Overbrenging van Afvalstoffen</documentation>
+						</annotation>
+					</element>
+					<element name="notificationType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Soort melding.
+Domeintabel: MeldingType</documentation>
+						</annotation>
+					</element>
+					<element name="dataAdministratorType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Type bevoegd gezag.
+codes.sikb.nl/0101/soort_bevoegd_gezag.xml</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="dateTime">
+						<annotation>
+							<documentation>verzendtijdstip - Datum en tijd verzending</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>Datum en tijd tot wanneer de melding geldig is.</documentation>
+						</annotation>
+					</element>
+					<element name="notificationNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>meldingsnummer</documentation>
+						</annotation>
+					</element>
+					<element name="relatedProject" type="imsikb0101:ProjectPropertyType" minOccurs="0"/>
+					<element name="concentrations" type="immetingen:AnalysisPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="emissions" type="immetingen:AnalysisPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="stakeholders" type="immetingen:SubjectPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Persoon of instelling die met de melding te maken heeft. De specifieke rol blijkt uit het type van het subject.</documentation>
+						</annotation>
+					</element>
+					<element name="applicationSite" type="imsikb0101:SoilRelocationSitePropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Locatie waar de grond, baggerspecie of bouwstof  wordt toegepast</documentation>
+						</annotation>
+					</element>
+					<element name="originSite" type="imsikb0101:SoilRelocationSitePropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Locatie waar de grond, baggerspecie of bouwstof  vandaan komt</documentation>
+						</annotation>
+					</element>
+					<element name="attachment" type="imsikb0101:AttachmentPropertyType" minOccurs="0"/>
+					<element name="application" type="imsikb0101:NotificationApplicationPropertyType" minOccurs="0"/>
+					<element name="qualityStatement" type="imsikb0101:QualityStatementPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="NotificationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Notification"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="NotificationApplication" type="imsikb0101:NotificationApplicationType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Melding Toepassing
+Beoogde toepassing bouwstoffen, grond of baggerspecie</documentation>
+		</annotation>
+	</element>
+	<complexType name="NotificationApplicationType">
+		<sequence>
+			<element name="materialType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Materiaal - Type toegepast materiaal.
+Domeintabel: ToepassingMateriaal</documentation>
+				</annotation>
+			</element>
+			<element name="applicationType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Soort toepassing.
+Domeintabel: ToepassingType</documentation>
+				</annotation>
+			</element>
+			<element name="specificationGBT" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Specificatie Grootschalige Bodem Toepassing.
+Domeintabel: SpecificatieGBT</documentation>
+				</annotation>
+			</element>
+			<element name="IsTemporaryStorage" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Tijdelijke opslag - Toepassing binnen een tijdelijke opslaglocatie.</documentation>
+				</annotation>
+			</element>
+			<element name="endDateTemporaryStorage" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Einddatum tijdelijke opslag</documentation>
+				</annotation>
+			</element>
+			<element name="endTime" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Einddatum toepassing</documentation>
+				</annotation>
+			</element>
+			<element name="startTime" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Startdatum toepassing</documentation>
+				</annotation>
+			</element>
+			<element name="volumeApplicatedMaterial" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>Volume toegepast materiaal - inhoud voorkeurs eenheid: m3</documentation>
+				</annotation>
+			</element>
+			<element name="amountApplicatedMaterial" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>Hoeveelheid toegepast materiaal - gewicht voorkeurs eenheid: ton</documentation>
+				</annotation>
+			</element>
+			<element name="layerThicknessApplication" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>Laagdikte toegepaste grond/baggerspecie (voorkeurseenheid is meters)</documentation>
+				</annotation>
+			</element>
+			<element name="layerThicknessApplicationVolume" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>Laagdikte toegepaste grond/baggerspecie (volume)</documentation>
+				</annotation>
+			</element>
+			<element name="layerThicknessApplicationDescription" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Laagdikte toegepaste grond/baggerspecie beschrijving</documentation>
+				</annotation>
+			</element>
+			<element name="layerThicknessIsolatingToplayer" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>Laagdikte leeflaag  (voorkeurseenheid is meters)</documentation>
+				</annotation>
+			</element>
+			<element name="layerThicknessIsolatingToplayerVolume" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>Laagdikte leeflaag (volume)</documentation>
+				</annotation>
+			</element>
+			<element name="layerThicknessIsolatingToplayerDescription" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Laagdikte leeflaag beschrijving</documentation>
+				</annotation>
+			</element>
+			<element name="reportApprovedOrganisation" type="string" minOccurs="0">
+				<annotation>
+					<documentation>rapport organisatie: Naam organisatie dat rapport m.b.t.  ontwerp toepassing heeft goedgekeurd</documentation>
+				</annotation>
+			</element>
+			<element name="reportAuthor" type="string" minOccurs="0">
+				<annotation>
+					<documentation>rapport_opsteller: Naam opsteller die rapport heeft opgesteld</documentation>
+				</annotation>
+			</element>
+			<element name="reportNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Nummer rapport</documentation>
+				</annotation>
+			</element>
+			<element name="nameApplicatedBuildingMaterial" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Naam toegepaste bouwstof.
+Domeintabel: BouwstofType</documentation>
+				</annotation>
+			</element>
+			<element name="managingOrganisation" type="string" minOccurs="0">
+				<annotation>
+					<documentation>naam_beheersinstantie - Naam organisatie of naam die IBC-maatregelen heeft goedgekeurd</documentation>
+				</annotation>
+			</element>
+			<element name="descriptionIsolationFacility" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Beschrijving isolerende voorziening</documentation>
+				</annotation>
+			</element>
+			<element name="equivalencePermitNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Gelijkwaardigheids- verklaringnummer voor afwijkende isolatiemaatregelen</documentation>
+				</annotation>
+			</element>
+			<element name="finalDestinationTemporaryStorage" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Eindbestemming van de toepassing bij tijdelijke opslag</documentation>
+				</annotation>
+			</element>
+			<element name="projectName" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Naam of omschrijving van het project, waar de melding op van toepassing is</documentation>
+				</annotation>
+			</element>
+			<element name="projectStartDate" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Geplande startdatum van het project</documentation>
+				</annotation>
+			</element>
+			<element name="projectEndDate" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Geplande einddatum van het project</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="NotificationApplicationPropertyType">
+		<sequence>
+			<element ref="imsikb0101:NotificationApplication"/>
+		</sequence>
+	</complexType>
+	<element name="Plot" type="imsikb0101:PlotType" substitutionGroup="immetingen:MeasurementObject">
+		<annotation>
+			<documentation>&lt;b&gt;plot&lt;/b&gt;
+elementary area where individual observations are made and/or samples are taken
+
+Plot is a subtype of SF_SpatialSamplingFeature. The plot provides the connection between the discrete location of a sampling or an observation and the site. Plot is also a typical feature of interest of soil observations. Plot has three subtypes: Surface, TrialPit and Borehole.</documentation>
+		</annotation>
+	</element>
+	<complexType name="PlotType">
+		<complexContent>
+			<extension base="immetingen:MeasurementObjectType">
+				<sequence>
+					<element name="site" type="imsikb0101:SitePropertyType" minOccurs="0">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:samplingPlot</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="usedInProject" type="imsikb0101:ProjectPropertyType" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:measurementObjects</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="PlotPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Plot"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="ProfileElement" type="imsikb0101:ProfileElementType" substitutionGroup="sams:SF_SpatialSamplingFeature">
+		<annotation>
+			<documentation>&lt;b&gt;profile element&lt;/b&gt;
+general term for both horizons and layers
+
+verticale uitsnede in of van de bodem met uniforme kenmerken en met een begin- en einddiepte</documentation>
+		</annotation>
+	</element>
+	<complexType name="ProfileElementType">
+		<complexContent>
+			<extension base="sams:SF_SpatialSamplingFeatureType">
+				<sequence>
+					<element name="upperDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Bovenkant/begin van de laag</documentation>
+						</annotation>
+					</element>
+					<element name="lowerDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Onderkant/einde van de laag</documentation>
+						</annotation>
+					</element>
+					<element name="order" type="integer" minOccurs="0">
+						<annotation>
+							<documentation>Volgorde van boven naar beneden</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="remark" type="string" minOccurs="0">
+						<annotation>
+							<documentation>opmerkingen</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ProfileElementPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:ProfileElement"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Project" type="imsikb0101:ProjectType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>&lt;b&gt;project&lt;/b&gt;
+&lt;digital exchange of soil-related data&gt;
+activity that leads to the collection of soil data
+unique process, consisting of a set of coordinated and controlled activities with start and finish dates, undertaken to achieve an objective conforming to specific requirements, including the constraints of time, cost and resources [ISO 10006], in this case the collection or interpretation of soil data.
+Note 1: An individual project may form part of a larger project structure.  
+Note 2: In some projects, the objective(s) is (are) refined and the product characteristics defined progressively as the project proceeds. (IEC 62198:2001).
+Note 3: The data can be existing or new.</documentation>
+		</annotation>
+	</element>
+	<complexType name="ProjectType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="asbestos" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Asbest aanwezig?
+Domeintabel: AsbestAanwezigheid</documentation>
+						</annotation>
+					</element>
+					<element name="assesorConclusion" type="string" minOccurs="0">
+						<annotation>
+							<documentation>belangrijkste resultaten van het onderzoek volgens de beoordelaar van het rapport</documentation>
+						</annotation>
+					</element>
+					<element name="assignmentCode" type="string" minOccurs="0">
+						<annotation>
+							<documentation>door opdrachtgever gehanteerde identificatiecode van het project</documentation>
+						</annotation>
+					</element>
+					<element name="followUpStatement" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>vervolg_oordeel , Beoordeling van het bevoegd gezag n.a.v. het onderzoek
+Domeintabel: VervolgWBB</documentation>
+						</annotation>
+					</element>
+					<element name="dataAdministrator" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Bronhouder/gegevensbeheerder - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: Bronhouders</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>datum waarop het onderzoek is afgerond</documentation>
+						</annotation>
+					</element>
+					<element name="investigationConclusion" type="string" minOccurs="0">
+						<annotation>
+							<documentation>belangrijkste resultaten van het onderzoek volgens de auteur van het rapport</documentation>
+						</annotation>
+					</element>
+					<element name="investigationReason" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>aanduiding van de aanleidingen van het onderzoek.
+Domeintabel: OnderzoekAanleidingen</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Geometry van het onderzoek</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Naam van het project/onderzoek</documentation>
+						</annotation>
+					</element>
+					<element name="phase" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>aanduiding van de onderzoeksfase conform Wbb.
+Domeintabel: OnderzoeksfaseType</documentation>
+						</annotation>
+					</element>
+					<element name="projectCode" type="string">
+						<annotation>
+							<documentation>door opdrachtnemer gehanteerde identificatiecode van het project</documentation>
+						</annotation>
+					</element>
+					<element name="projectType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Aanduiding van het type onderzoek/rapport dat voor de locatie is uitgevoerd/opgesteld.
+Domeintabel: OnderzoekType</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>aanvullende opmerkingen</documentation>
+						</annotation>
+					</element>
+					<element name="reportCertificateNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Certificering nummer van de applicatie die de rapportage heeft gemaakt</documentation>
+						</annotation>
+					</element>
+					<element name="reportDate" type="date" minOccurs="0">
+						<annotation>
+							<documentation>De datum van het onderzoek/rapport waarin de resultaten zijn vastgelegd</documentation>
+						</annotation>
+					</element>
+					<element name="reportNumber" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Het nummer of kenmerk van het onderzoek/rapport waarin de resultaten zijn vastgelegd</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>datum waarop het onderzoek is gestart</documentation>
+						</annotation>
+					</element>
+					<element name="potentiallyContaminated" type="boolean" minOccurs="0">
+						<annotation>
+							<documentation>aanduiding of de locatie al dan niet verdacht wordt van ernstig
+bodemverontreiniging</documentation>
+						</annotation>
+					</element>
+					<element name="potentialContaminantParameter" type="immetingen:PhysicalPropertyPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>stoffen die als gevolg van (potentieel) verdachte activiteiten vermoedelijk in verhoogde concentratie aanwezig zijn</documentation>
+						</annotation>
+					</element>
+					<element name="tank" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Tank aanwezig?
+Domeintabel: TankAanwezigheid</documentation>
+						</annotation>
+					</element>
+					<element name="siteOfInterest" type="imsikb0101:SitePropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:concernedProject</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="stakeholders" type="immetingen:SubjectPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="measurementObjects" type="imsikb0101:PlotPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:usedInProject</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="labassignments" type="imsikb0101:LabAssignmentPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:belongsToProject</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="dossiers" type="imsikb0101:SoilManagementDossierPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:projects</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="contaminationInfo" type="imsikb0101:ContaminationInformationPropertyType" minOccurs="0">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:project</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="remediation" type="imsikb0101:RemediationPropertyType" minOccurs="0">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:project</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="Addresses" type="immetingen:AddressPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="documents" type="imsikb0101:DocumentPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="ProjectPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Project"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="QualityStatement" type="imsikb0101:QualityStatementType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Kwaliteitsverklaring
+Verklaring over de kwaliteit van de toe te passen partij. Tenminste meetwaarde en componentid dienen te worden ingevuld</documentation>
+		</annotation>
+	</element>
+	<complexType name="QualityStatementType">
+		<sequence>
+			<element name="statementType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Soort verklaring.
+Domeintabel: VerklaringType</documentation>
+				</annotation>
+			</element>
+			<element name="statementOrganisation" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Naam organisatie die verklaring heeft opgesteld.</documentation>
+				</annotation>
+			</element>
+			<element name="reportNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Rapportnummer erkende verklaring c.q. bodemrapport</documentation>
+				</annotation>
+			</element>
+			<element name="approvalNumber" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Kenmerk erkende verklaring</documentation>
+				</annotation>
+			</element>
+			<element name="BKKadministrator" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Naam beheerder Bodemkwaliteitskaart.
+Domeintabel: Bronhouders</documentation>
+				</annotation>
+			</element>
+			<element name="BKKzone" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Naam zone bodemkwaliteitskaart</documentation>
+				</annotation>
+			</element>
+			<element name="isStatementAttached" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Indicatie verklaring bijgevoegd</documentation>
+				</annotation>
+			</element>
+			<element name="avgLutum" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>lutum - Gemiddelde lutumfractie van de partij - voorkeurseenheid: (w/w)</documentation>
+				</annotation>
+			</element>
+			<element name="avgOrganicMatter" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>organische stof - Gemiddeld organisch stof gehalte van de partij - voorkeurseenheid: (w/w)</documentation>
+				</annotation>
+			</element>
+			<element name="avgWaste" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>afval - Gemiddeld afval percentage van de partij- voorkeurseenheid: (w/w)</documentation>
+				</annotation>
+			</element>
+			<element name="avgDebris" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>puin - Gemiddeld puin percentage van de partij- voorkeurseenheid: (w/w)</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="QualityStatementPropertyType">
+		<sequence>
+			<element ref="imsikb0101:QualityStatement"/>
+		</sequence>
+	</complexType>
+	<element name="RegistrationWKPB" type="imsikb0101:RegistrationWKPBType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>registratie_wkpb</documentation>
+		</annotation>
+	</element>
+	<complexType name="RegistrationWKPBType">
+		<sequence>
+			<element name="archiveCode" type="string" minOccurs="0">
+				<annotation>
+					<documentation>deel_en_nummer - Archiefcode waarmee het stuk bij het Kadaster bekend is</documentation>
+				</annotation>
+			</element>
+			<element name="dateErasure" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Datum_doorhaling - Datum waarop het document is doorgehaald, ofwel uit het kadastrale register is verwijderd</documentation>
+				</annotation>
+			</element>
+			<element name="dateSubscription" type="date" minOccurs="0">
+				<annotation>
+					<documentation>Datum_inschrijving - Datum van inschrijving van het stuk</documentation>
+				</annotation>
+			</element>
+			<element name="depotNumber" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>Depotnummer - Depotnummer van de aangeleverde contou</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="reasonErasure" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Reden_doorhaling - Reden waarom het document is uitgeschreven uit het kadastrale register</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="RegistrationWKPBPropertyType">
+		<sequence>
+			<element ref="imsikb0101:RegistrationWKPB"/>
+		</sequence>
+	</complexType>
+	<element name="Remediation" type="imsikb0101:RemediationType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Sanering - Het aanpakken van een bodemverontreiniging zodat bij het huidige of toekomstige gebruik van de locatie geen risico's meer aanwezig zijn voor mens en milieu.</documentation>
+		</annotation>
+	</element>
+	<complexType name="RemediationType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="agreementDate" type="date" minOccurs="0">
+						<annotation>
+							<documentation>akkoordDatum - De datum waarop het bevoegd gezag van de Wet bodembescherming (een provincie of een gemeente) accoord is gegaan met  het saneringsplan.</documentation>
+						</annotation>
+					</element>
+					<element name="amountCleaned" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>hoeveelheidGereinigd - De hoeveelheid afgegraven grond (bij voorkeur in tonnen) dat is afgevoerd naar een bevoegd grondverwerkingsbedrijf (grondreiniger).</documentation>
+						</annotation>
+					</element>
+					<element name="amountDeposited" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>hoeveelheidGestort - De hoeveelheid afgegraven grond (in tonnen) dat is afgevoerd naar een bevoegd grondverwerkingsbedrijf (grondstort).</documentation>
+						</annotation>
+					</element>
+					<element name="amountReused" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>hoeveelheidHerbruikt - De hoeveelheid afgegraven grond (bij voorkeur in tonnen) dat, eventueel op een andere locatie, is hergebruikt.</documentation>
+						</annotation>
+					</element>
+					<element name="amountStored" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>hoeveelheidOpgeslagen - De hoeveelheid afgegraven grond (in tonnen) dat tijdelijk opgeslagen is geweest en weer is hergebruikt op de locatie.</documentation>
+						</annotation>
+					</element>
+					<element name="area" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>oppervlakteGrond - De oppervlakte van het terreindeel waar de grond is gesaneerd (voorkeur in vierkante meters)</documentation>
+						</annotation>
+					</element>
+					<element name="contourType" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>contourType - aanduiding van matrix waarin de bodemsanering geografisch
+begrensd is - contour
+Domeintabel: ContourType</documentation>
+						</annotation>
+					</element>
+					<element name="dataAdministrator" type="gml:CodeType">
+						<annotation>
+							<documentation>Gegevensbeheerder/ bronhouder - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: &lt;font color="#993300"&gt;Bronhouders&lt;/font&gt;</documentation>
+						</annotation>
+					</element>
+					<element name="destinationAfterRemediation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>functie na saneren - Het beoogde bodemgebruik op de locatie nadat de deelsanering is afgerond.
+codes.sikb.nl/0101/gebruik.xml</documentation>
+						</annotation>
+					</element>
+					<element name="destinationBeforeRemediation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>functieVoorSaneren - Het bodemgebruik op de locatie voorafgaand aan de deelsanering.
+codes.sikb.nl/0101/gebruik.xml</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>eindTijd - De werkelijke datum waarop de bodemsaneringswerkzaamheden zijn beeindigd omdat de bodemverontreiniging voldoende is verwijderd of wordt beheerd.</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>geometrieGepland - Geometrie (begrenzing) van het gebied, dat gepland is voor sanering
+Mag alleen GM_Point of GM_MultiPolygon zijn.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="lowerDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>onderkant van de saneringscontour in meters ten opzichte van het referentievlak</documentation>
+						</annotation>
+					</element>
+					<element name="notification" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>melding - De enige melding die kan worden gedaan is die in het kader van het Besluit Uniforme Saneringen (BUS). Het BUS is een landelijke uniforme regeling voor eenvoudige, gelijksoortige saneringen die in korte tijd afgerond kunnen worden.
+codes.sikb.nl/0101/melding.xml</documentation>
+						</annotation>
+					</element>
+					<element name="postRemediationValue" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>terugsaneerwaarde - normsoort of kwaliteitsklasse die binnen de saneringscontour
+als terugsaneerwaarde is gehanteerd - terugsaneerwaarde
+http://codes.sikb.nl/0101/terugsaneerwaarde.xml</documentation>
+						</annotation>
+					</element>
+					<element name="realizedVariationSubsoil" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>gerealiseerdVaratieOndergrond - De saneringsmethode die is uitgevoerd in de ondergrond vanaf 0,5 m-mv en dieper.
+codes.sikb.nl/0101/san_ondergrond_id.xml</documentation>
+						</annotation>
+					</element>
+					<element name="realizedVariationTopsoil" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>gerealiseerdeVariantBovengrond - De saneringsmethode die is uitgevoerd in de bovengrond van 0,0 tot 0,5 m-mv.
+
+codes.sikb.nl/0101/san_bovengrond_id.xml</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen</documentation>
+						</annotation>
+					</element>
+					<element name="remediationReason" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>aanleiding - De aanleiding van de uitgevoerde deelsanering.
+codes.sikb.nl/0101/saneringsaanleiding.xml</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>beginTijd - Werkelijke datum waarop de werkzaamheden van start zijn gegaan</documentation>
+						</annotation>
+					</element>
+					<element name="upperDepth" type="immetingen:DepthPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>bovenkant van de saneringscontour in meters ten opzichte van het referentievlak</documentation>
+						</annotation>
+					</element>
+					<element name="volumeGroundwater" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>volumeGrondwater - De omvang van het gesaneerde bodemvolume (voorkeur in kubieke meters) waar eerder met bodemonderzoek is vastgesteld dat het grondwater verontreinigd is</documentation>
+						</annotation>
+					</element>
+					<element name="volumeSoil" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>volumeGrond - De hoeveelheid gesaneerde grond (voorkeur in kubieke meters).</documentation>
+						</annotation>
+					</element>
+					<element name="project" type="imsikb0101:ProjectPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:remediation</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RemediationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Remediation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="Risk" type="imsikb0101:RiskType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Het soort (potentieel) risico, wat de bodemverontreiniging veroorzaakt of kan veroorzaken</documentation>
+		</annotation>
+	</element>
+	<complexType name="RiskType">
+		<sequence>
+			<element name="criterion" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>criterium - De belangrijkste criteria of de meest dominante blootstellingsroute, waaruit het desbetreffende (potentieel) spoedeisend risico volgt 
+http://codes.sikb.nl/0101/criterium_risico.xml</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+				</annotation>
+			</element>
+			<element name="bottleneck" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>knelpunt - Eventuele knelpunt die verwacht wordt bij de aanpak van het desbetreffende risico 
+http://codes.sikb.nl/0101/knelpunt_aanpak_risico.xml</documentation>
+				</annotation>
+			</element>
+			<element name="riskType" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>risicoType - Het soort (potentieel) risico, dat door de bodemverontreiniging wordt veroorzaakt.
+
+codes.sikb.nl/0101/risico.xml</documentation>
+				</annotation>
+			</element>
+			<element name="temporaryRemedy" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>tijdelijkeMaatregel - Aanduiding dat tijdelijke maatregelen zijn getroffen om het desbetreffende spoedeisende risico weg te halen. 
+
+ttp://codes.sikb.nl/0101/tijdelijke_maatregel.xml</documentation>
+				</annotation>
+			</element>
+			<element name="remarks" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Opmerkingen bij een Risico</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="RiskPropertyType">
+		<sequence>
+			<element ref="imsikb0101:Risk"/>
+		</sequence>
+	</complexType>
+	<element name="Sample" type="imsikb0101:SampleType" substitutionGroup="immetingen:Sample">
+		<annotation>
+			<documentation>Een monster, idientiek aan die van IMMetingen maar met extra koppelingen naar: Project, MonsterVerontreiniging, AsbestSamenstelling en UitloogFractie.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SampleType">
+		<complexContent>
+			<extension base="immetingen:SampleType">
+				<sequence>
+					<element name="inProject" type="imsikb0101:ProjectPropertyType" minOccurs="0"/>
+					<element name="expectedPollutions" type="imsikb0101:SamplePollutionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="asbestos" type="imsikb0101:AsbestosCompositionPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SamplePropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Sample"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SampleAnalysisRequest" type="imsikb0101:SampleAnalysisRequestType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Monster analyse aanvraag
+In de labopdracht moet een monster gekoppeld worden aan een analysepakket wat erop moet worden uitgevoerd.
+Hiermee wordt de koppeling gelegd tussen het monster en de pakketten, daarbij ook de naamgeving van het monster op het Certificaat . Ok de manier hoe het monster behandeld moet worden kan worden aangegeven.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SampleAnalysisRequestType">
+		<sequence>
+			<element name="nameOnLabCertificate" type="string" minOccurs="0">
+				<annotation>
+					<documentation>Naam voor op het certificaat van het lab. Weergave van analysemonster op certificaat (gelijk aan sample/name indien niets ingevuld door opdrachtgever)</documentation>
+				</annotation>
+			</element>
+			<element name="certificateOrder" type="integer" minOccurs="0">
+				<annotation>
+					<documentation>Volgorde op het certificaat</documentation>
+				</annotation>
+			</element>
+			<element name="labSampleType" type="string" minOccurs="0">
+				<annotation>
+					<documentation>monstersoort type - Labmatrix - Was vroeger een code uit sikb.lovmonstertype, maar in het IMSIKB0101 wordt dit aangeleverd vanuit de labs in de LabAanlevering. 
+Dit is dus een vrije waarde geworden, afhankelijk van het LAB.</documentation>
+				</annotation>
+			</element>
+			<element name="sampleCertification" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>monster certificering  - lovcertificering maar wordt waarschijnlijk Type Accreditatie - bijv AP04 of AS3000.
+Domeintabel: CertificeringsCode</documentation>
+				</annotation>
+			</element>
+			<element name="sample" type="immetingen:SamplePropertyType"/>
+			<element name="requestedPackage" type="imsikb0101:AnalysisPackagePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="status" type="imsikb0101:LabAssignmentStatusPropertyType" minOccurs="0"/>
+		</sequence>
+	</complexType>
+	<complexType name="SampleAnalysisRequestPropertyType">
+		<sequence>
+			<element ref="imsikb0101:SampleAnalysisRequest"/>
+		</sequence>
+	</complexType>
+	<element name="SamplePollution" type="imsikb0101:SamplePollutionType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>De waargenomen mate van verontreiniging van het veldmonster.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SamplePollutionType">
+		<sequence>
+			<element name="pollutionGroupCode" type="gml:CodeType">
+				<annotation>
+					<documentation>Vervuilinggroep - Groep waartoe de verwachte vervuiling behoort.
+Domeintabel: VervuilingGroep</documentation>
+				</annotation>
+			</element>
+			<element name="gradation" type="gml:CodeType">
+				<annotation>
+					<documentation>Gradatie van de verwachte vervuiling, gradatie_c: zeer zwak, zwak, matig, sterk, zeer sterk.
+Domeintabel: VervuilinggroepGradatie</documentation>
+				</annotation>
+			</element>
+			<element name="expectedValue" type="string">
+				<annotation>
+					<documentation>Verwachte waarde, door adviseur geschat, waarbij kan aangegeven zijn of de waarde "kleiner dan" of "groter dan" is.</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="SamplePollutionPropertyType">
+		<sequence>
+			<element ref="imsikb0101:SamplePollution"/>
+		</sequence>
+	</complexType>
+	<element name="Site" type="imsikb0101:SiteType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>&lt;b&gt;site&lt;/b&gt;
+defined area which is subject to a soil quality investigation
+
+A site is a defined, spatially extended area and provides the real world object to which soil data are related. It represents the spatial link between point, linear and areal soil observations on the one hand and its environment (e.g. the landscape or larger spatial objects) on the other. As such, it provides the possibility to connect data on spatially extended phenomena, e.g. vegetation, with point, linear and areal sampling features (plots). It also allows for the possibility to combine the results of (quasi-)synchronous repetitions of observations of the same kind. The site is furthermore the time link between repeated soil observations, e.g. in the framework of a soil monitoring. Generally, within one single project, a site is spatially invariant, but contains all plots for single or repeated observations and samplings, both related to one point in time or several points in time. Very often, the data obtained on a site are considered to originate from one single point in further data processing and evaluation.
+In terms of OM, each site is a sampled feature of its plots which are spatial sampling features. Site serves also as a typical feature of interest of soil observations.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SiteType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="extend" minOccurs="0">
+						<annotation>
+							<documentation>is a map polygon delineating the boundaries on the earth's surface.</documentation>
+						</annotation>
+						<complexType>
+							<complexContent>
+								<extension base="gml:AbstractMemberType">
+									<sequence minOccurs="0">
+										<element ref="gml:PolygonPatch"/>
+									</sequence>
+									<attributeGroup ref="gml:AssociationAttributeGroup"/>
+								</extension>
+							</complexContent>
+						</complexType>
+					</element>
+					<element name="position" type="gml:PointPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>is a point coordinate providing the location on earth.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string">
+						<annotation>
+							<documentation>Naam zoals de deellocatie bekend is</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="samplingPlot" type="imsikb0101:PlotPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:site</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="concernedProject" type="imsikb0101:ProjectPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:siteOfInterest</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SitePropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:Site"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SitemanagementMeasure" type="imsikb0101:SitemanagementMeasureType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>ZorgMaatregel - Nazorgmaatregelen bij restverontreinigingen na sanering in het kader van de WBB</documentation>
+		</annotation>
+	</element>
+	<complexType name="SitemanagementMeasureType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="dataAdministrator" type="gml:CodeType">
+						<annotation>
+							<documentation>Bronhouder/bevoegd gezag - De overheidsinstantie die de gegevensbeheerder van dit element is.
+Domeintabel: Bronhouders</documentation>
+						</annotation>
+					</element>
+					<element name="duration" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>nazorgdur - De geschatte duur van de (na)zorgmaatregelen (liefste in jaren). Een eventuele code '-1' staat voor 'oneindig'.</documentation>
+						</annotation>
+					</element>
+					<element name="endTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>einddatum - De werkelijke datum waarop de (na)zorgmaatregelen zijn beeindigd omdat aan de bodemsaneringsdoelstelling is voldaan.</documentation>
+						</annotation>
+					</element>
+					<element name="aftercareFramework" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>nazorgkader - Kader(s) waarin nazorg plaatsvind - nazorgkader
+codes.sikb.nl/0101/nazorgkader.xml</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>Geometrie (begrenzing) van het gebied van de zorgmaatregel.
+Mag alleen GM_Point of GM_MultiPolygon zijn.</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerking</documentation>
+						</annotation>
+					</element>
+					<element name="startTime" type="date" minOccurs="0">
+						<annotation>
+							<documentation>startdatum - De datum waarop de (na)zorgmaatregelen op de locatie van start zijn gegaan (meestal 1e beschikkingsdatum van het bevoegd gezag Wet bodembescherming).</documentation>
+						</annotation>
+					</element>
+					<element name="status" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>Soort zorgmaatregel: IBC (Isoleren, Beheersen, Controleren), monitoring of registratie
+codes.sikb.nl/0101/zorg.xml</documentation>
+						</annotation>
+					</element>
+					<element name="usageRestrictions" type="imsikb0101:UsageRestrictionPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SitemanagementMeasurePropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:SitemanagementMeasure"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SoilLocation" type="imsikb0101:SoilLocationType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Gebied waarop bodeminformatie van toepassing is</documentation>
+		</annotation>
+	</element>
+	<complexType name="SoilLocationType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="area" type="gml:MeasureType" minOccurs="0">
+						<annotation>
+							<documentation>De oppervlakte van de locatie (in vierkante meters) waarvan bodeminformatie bekend is.</documentation>
+						</annotation>
+					</element>
+					<element name="geometry" type="gml:GeometryPropertyType">
+						<annotation>
+							<documentation>Geometrie van de bodemlocatie : punt, lijnstuk of (verzameling van) polygoon</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="name" type="string" minOccurs="0">
+						<annotation>
+							<documentation>De naam van de locatie waardoor deze herkend kan worden.</documentation>
+						</annotation>
+					</element>
+					<element name="noteLocationCreation" type="string" minOccurs="0">
+						<annotation>
+							<documentation>toelichting_aanmaak_locatie - Toeliching voor het aanmaken van de locatie</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>aanvullende opmerkingen</documentation>
+						</annotation>
+					</element>
+					<element name="statdyn" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>aanduiding van de ruimtelijke, maatschappelijke of
+economische dynamiek van de locatie conform Monitoring
+Bodemsanering. (statisch/dynamisch)
+Domeintabel: Stat_Dyn</documentation>
+						</annotation>
+					</element>
+					<element name="Addresses" type="immetingen:AddressPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="addressLocations" type="imsikb0101:AddressLocationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SoilLocationPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:SoilLocation"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SoilManagementDossier" type="imsikb0101:SoilManagementDossierType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>BodemBeheerDossier</documentation>
+		</annotation>
+	</element>
+	<complexType name="SoilManagementDossierType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="projects" type="imsikb0101:ProjectPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<appinfo>
+								<reversePropertyName xmlns="http://www.opengis.net/gml/3.2">imsikb0101:dossiers</reversePropertyName>
+							</appinfo>
+						</annotation>
+					</element>
+					<element name="soilLocation" type="imsikb0101:SoilLocationPropertyType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SoilManagementDossierPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:SoilManagementDossier"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SoilRelocationSite" type="imsikb0101:SoilRelocationSiteType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>Toepassingslocatie en Herkomstlocatie
+Locatie waar de grond, baggerspecie of bouwstof  wordt toegepast of vandaan komt.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SoilRelocationSiteType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="description" type="string">
+						<annotation>
+							<documentation>Omschrijving locatie</documentation>
+						</annotation>
+					</element>
+					<element name="groundLevel" type="immetingen:HeightPropertyType" minOccurs="0">
+						<annotation>
+							<documentation>maaiveld - Bodemlaag hoogte t.o.v. maaiveld</documentation>
+						</annotation>
+					</element>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt.</documentation>
+						</annotation>
+					</element>
+					<element name="sedimentQualityClass" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>WaterbodemKwaliteitsKlasse - De door de gemeente vastgestelde waterbodemkwaliteitsklasse of zelf gemeten waterbodemkwaliteitsklasse op de locatie.
+Domeintabel: WaterbodemKwaliteitsKlasse</documentation>
+						</annotation>
+					</element>
+					<element name="soilFunctionClass" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>BodemFunctieKlasse - De door de gemeente vastgestelde bodemfunctieklasse op de locatie.
+Domeintabel: BodemFunctieKlasse</documentation>
+						</annotation>
+					</element>
+					<element name="soilQualityClass" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>BodemKwaliteitsKlasse - De door de gemeente vastgestelde bodemkwaliteitsklasse of zelf gemeten bodemkwaliteitsklasse op de locatie
+Domeintabel: BodemKwaliteitsKlasse</documentation>
+						</annotation>
+					</element>
+					<element name="soilProcessingOrganisation" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>grondbewerkingsinrichting  - Naam bewerkingsinrichting grond of baggerspecie  op de locatie
+Domeintabel: GrondbewerkingsInrichting</documentation>
+						</annotation>
+					</element>
+					<element name="Addresses" type="immetingen:AddressPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+					<element name="position" type="imsikb0101:GeographicPositionPropertyType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SoilRelocationSitePropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:SoilRelocationSite"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="SourceSystem" type="imsikb0101:SourceSystemType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Bronsysteem</documentation>
+		</annotation>
+	</element>
+	<complexType name="SourceSystemType">
+		<sequence>
+			<element name="application" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Applicatie - Naam applicatie waar gegevens oorspronkelijk vandaan komen (ook convenantpartijen) =&gt; Naam applicatie die voor deze locatie gegevensbeheerders is c.q.  is geweest. 
+Domeintabel: Applicaties</documentation>
+				</annotation>
+			</element>
+			<element name="applicationID" type="string" minOccurs="0">
+				<annotation>
+					<documentation>id van de locatie binnen de applicatie die voor deze locatie gegevensbeheerders is c.q.  Is geweest</documentation>
+				</annotation>
+			</element>
+			<element name="identification" type="immetingen:NEN3610IDPropertyType">
+				<annotation>
+					<documentation>&lt;font color="#0f0f0f"&gt;Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt&lt;/font&gt;</documentation>
+				</annotation>
+			</element>
+			<element name="organisation" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>organisatie - Naam organisatie die voor deze locatie gegevensbeheerders is c.q.  ss geweest .
+Domeintabel: Bronhouders</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="SourceSystemPropertyType">
+		<sequence>
+			<element ref="imsikb0101:SourceSystem"/>
+		</sequence>
+	</complexType>
+	<element name="SubjectFeatureCollection" type="imsikb0101:SubjectFeatureCollectionType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>De mogelijkheid om een hele collectie met Betrokkenen los te kunnen uitwisselen.</documentation>
+		</annotation>
+	</element>
+	<complexType name="SubjectFeatureCollectionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="member" type="immetingen:SubjectPropertyType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SubjectFeatureCollectionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:SubjectFeatureCollection"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="TestStandardValue" type="imsikb0101:TestStandardValueType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Toetsnormwaarde
+Toetsnorm waarde waaraan een Analyse is getoets en een Toetsoordeel is getrokken.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TestStandardValueType">
+		<sequence>
+			<element name="testStandardType" type="gml:CodeType">
+				<annotation>
+					<documentation>Type van de toetsnorm waarde zoals: Wonen, Industrie, Interventiewaarde, enz.
+Domeintabel: &lt;font color="#1f497d"&gt;NormClassificatie&lt;/font&gt;</documentation>
+				</annotation>
+			</element>
+			<element name="upper" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>bovengrenswaarde van de toetsnorm</documentation>
+				</annotation>
+			</element>
+			<element name="lower" type="gml:MeasureType" minOccurs="0">
+				<annotation>
+					<documentation>ondergrenswaarde van de toetsnorm</documentation>
+				</annotation>
+			</element>
+			<element name="testStandardMessageCode" type="gml:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>Een aanvullende melding bij de normwaarde voor een stof.
+domeintabel: Toetsmeldingen</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="TestStandardValuePropertyType">
+		<sequence>
+			<element ref="imsikb0101:TestStandardValue"/>
+		</sequence>
+	</complexType>
+	<element name="TestingConclusion" type="imsikb0101:TestingConclusionType" substitutionGroup="immetingen:TestingConclusion">
+		<annotation>
+			<documentation>Toetsoordeel
+Een toetsoordeel over een analyse.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TestingConclusionType">
+		<complexContent>
+			<extension base="immetingen:TestingConclusionType">
+				<sequence>
+					<element name="percentageExceeding" type="double" minOccurs="0">
+						<annotation>
+							<documentation>Het overschrijdingspercentage van de norm waarop het oordeel is gebaseerd. De waarde van overschrijding is altijd in ‘%’ en wordt berekend volgens deze formule: waarde = ((rekengehalte-normwaarde)*100)/ normwaarde.</documentation>
+						</annotation>
+					</element>
+					<element name="testing" type="imsikb0101:ExecutedTestingPropertyType"/>
+					<element name="botovaAdditions" type="imsikb0101:BoToVaSpecificPropertyType" minOccurs="0"/>
+					<element name="standardValues" type="imsikb0101:TestStandardValuePropertyType" minOccurs="0" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="TestingConclusionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:TestingConclusion"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+	<element name="TestingVariabele" type="imsikb0101:TestingVariabeleType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Toetsvariabele
+Tijdens het toetsen worden bepaalde tellers bijgehouden, deze worden teruggestuurd middels een variabele.
+Daarnaast kan bij het toetsen ook een bepaalde instelling gedaan zijn welke invloed heeft op een toetsing. Deze wordt ook teruggekoppeld bij een Uitgevoerde toetsing.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TestingVariabeleType">
+		<sequence>
+			<element name="testingVariabeleType" type="gml:CodeType">
+				<annotation>
+					<documentation>Type van de variabele zoals deze in de BoToVa gebruikt is. Voorbeelden: IsVormgegevenBouwstof, gehanteerdLutum, TellerOverschrijdingenAchtergrondwaarde.
+Domeintabel: ToetsingVariabelen</documentation>
+				</annotation>
+			</element>
+			<element name="value" type="imsikb0101:TestingVariableValuePropertyType"/>
+		</sequence>
+	</complexType>
+	<complexType name="TestingVariabelePropertyType">
+		<sequence>
+			<element ref="imsikb0101:TestingVariabele"/>
+		</sequence>
+	</complexType>
+	<element name="TestingVariableValue" type="imsikb0101:TestingVariableValueType" substitutionGroup="gml:AbstractObject">
+		<annotation>
+			<documentation>Toetsvariabele waarde
+De waarde van een variabele kan van inhoud verschillen. De waarde kan zijn een String, Boolean, Datum of Numeriek.</documentation>
+		</annotation>
+	</element>
+	<complexType name="TestingVariableValueType">
+		<choice>
+			<element name="booleanValue" type="boolean">
+				<annotation>
+					<documentation>De boolean waarde: True/False</documentation>
+				</annotation>
+			</element>
+			<element name="dateTimeValue" type="dateTime">
+				<annotation>
+					<documentation>De datumtijd waarde</documentation>
+				</annotation>
+			</element>
+			<element name="numericValue" type="double">
+				<annotation>
+					<documentation>De numerieke waarde</documentation>
+				</annotation>
+			</element>
+			<element name="stringValue" type="string">
+				<annotation>
+					<documentation>De string waarde.</documentation>
+				</annotation>
+			</element>
+		</choice>
+	</complexType>
+	<complexType name="TestingVariableValuePropertyType">
+		<sequence>
+			<element ref="imsikb0101:TestingVariableValue"/>
+		</sequence>
+	</complexType>
+	<element name="UsageRestriction" type="imsikb0101:UsageRestrictionType" substitutionGroup="gml:AbstractFeature">
+		<annotation>
+			<documentation>GebruiksBeperking</documentation>
+		</annotation>
+	</element>
+	<complexType name="UsageRestrictionType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="identification" type="immetingen:NEN3610IDPropertyType">
+						<annotation>
+							<documentation>&lt;font color="#0f0f0f"&gt;Een unieke code die wordt aangemaakt als het object voor het eerst wordt aangemaakt&lt;/font&gt;</documentation>
+						</annotation>
+					</element>
+					<element name="restriction" type="gml:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>beperking - De gebruiksbeperking(en) die worden veroorzaakt door de (na)zorgmaatregel van de bodemverontreiniging.
+
+codes.sikb.nl/0101/gebruiksbeperking.xml</documentation>
+						</annotation>
+					</element>
+					<element name="remarks" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Opmerkingen</documentation>
+						</annotation>
+					</element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="UsageRestrictionPropertyType">
+		<sequence minOccurs="0">
+			<element ref="imsikb0101:UsageRestriction"/>
+		</sequence>
+		<attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</complexType>
+</schema>
