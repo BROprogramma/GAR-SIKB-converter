@@ -8,6 +8,7 @@
                          xmlns:sam="http://www.opengis.net/sampling/2.0"
                          xmlns:xlink="http://www.w3.org/1999/xlink"
                          xmlns:spec="http://www.opengis.net/samplingSpecimen/2.0"
+                         xmlns:om="http://www.opengis.net/om/2.0"
                          xmlns:xsi="http://www.w3.org/2001/XMLSchema">
    <brocom:requestReference>[todo-mapping?]</brocom:requestReference>
    <brocom:deliveryAccountableParty>urn:imsikb0101:Bronhouders:id:54</brocom:deliveryAccountableParty>
@@ -28,40 +29,27 @@
             <garcom:samplingOperator>
                <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, value of processOperator?]</brocom:chamberOfCommerceNumber>
             </garcom:samplingOperator>
-            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">nen5744/A1</garcom:samplingStandard>
+            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample file]</garcom:samplingStandard>
             <garcom:samplingDevice>
-               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">slangenpomp</garcom:pumpType>
-            </garcom:samplingDevice>
-            <garcom:fieldObservation>
-               <garcom:primaryColour codeSpace="urn:bro:gar:Colour">wit</garcom:primaryColour>
-               <garcom:secondaryColour codeSpace="urn:bro:gar:Colour">grijs</garcom:secondaryColour>
-               <garcom:colourStrength codeSpace="urn:bro:gar:ColourStrength">licht</garcom:colourStrength>
-               <garcom:abnormalityInCooling>ja</garcom:abnormalityInCooling>
-               <garcom:abnormalityInDevice>nee</garcom:abnormalityInDevice>
-               <garcom:pollutedByEngine>onbekend</garcom:pollutedByEngine>
-               <garcom:filterAerated>ja</garcom:filterAerated>
-               <garcom:groundWaterLevelDroppedTooMuch>nee</garcom:groundWaterLevelDroppedTooMuch>
-               <garcom:abnormalFilter>onbekend</garcom:abnormalFilter>
-               <garcom:sampleAerated>ja</garcom:sampleAerated>
-               <garcom:hoseReused>nee</garcom:hoseReused>
-               <garcom:temperatureDifficultToMeasure>onbekend</garcom:temperatureDifficultToMeasure>
-            </garcom:fieldObservation>
-            <garcom:fieldMeasurement>
-               <garcom:parameter>1496</garcom:parameter>
-               <garcom:fieldMeasurementValue uom="mg/l">5.123</garcom:fieldMeasurementValue>
-               <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">goedgekeurd</garcom:qualityControlStatus>
-            </garcom:fieldMeasurement>
-            <garcom:fieldMeasurement>
-               <garcom:parameter>6024</garcom:parameter>
-               <garcom:fieldMeasurementValue uom="10^-3">3</garcom:fieldMeasurementValue>
-               <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">afgekeurd</garcom:qualityControlStatus>
-            </garcom:fieldMeasurement>
-            <garcom:fieldMeasurement>
-               <garcom:parameter>3548</garcom:parameter>
-               <garcom:fieldMeasurementValue uom="uS/cm">15.123</garcom:fieldMeasurementValue>
-               <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">onbekend</garcom:qualityControlStatus>
-            </garcom:fieldMeasurement>
-         </fieldResearch>
+               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample file]</garcom:pumpType>
+            </garcom:samplingDevice>[todo rest of fieldResearch]
+                </fieldResearch>
+         <gar:laboratoryAnalysis>
+            <garcom:analysisProcess>
+               <garcom:analysisDate>
+                  <brocom:date>[todo find linked TimePeriod by id: #_1645261c-381e-4af2-a7d5-78fc4e73aa78</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique">12</garcom:analyticalTechnique>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod">44</garcom:valuationMethod>
+               <garcom:analysis>
+                  <garcom:parameter>216</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:Eenheid:id:59">633.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file yet]</garcom:reportingLimit>
+                  <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">onbeslist</garcom:qualityControlStatus>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+         </gar:laboratoryAnalysis>
       </gar:GAR>
    </gar:sourceDocument>
 </gar:registrationRequest>
