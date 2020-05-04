@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<imsikb0101:FeatureCollectionIMSIKB0101 gml:id="ONDERZOEKTEST" xmlns:imsikb0101="http://www.sikb.nl/imsikb0101" xmlns:immetingen="http://www.sikb.nl/immetingen" 
-	xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gsr="http://www.isotc211.org/2005/gsr"
-	xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml/3.2" 
-	xmlns:om="http://www.opengis.net/om/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" 
-	xmlns:spec="http://www.opengis.net/samplingSpecimen/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xsi:schemaLocation="http://www.sikb.nl/imsikb0101 ../xsd_sikb0101/imsikb0101_v14.2.0.xsd">
+<imsikb0101:FeatureCollectionIMSIKB0101 gml:id="ONDERZOEKTEST" xmlns:imsikb0101="http://www.sikb.nl/imsikb0101" xmlns:immetingen="http://www.sikb.nl/immetingen" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gsr="http://www.isotc211.org/2005/gsr" xmlns:gss="http://www.isotc211.org/2005/gss" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:om="http://www.opengis.net/om/2.0" xmlns:sam="http://www.opengis.net/sampling/2.0" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:spec="http://www.opengis.net/samplingSpecimen/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sikb.nl/imsikb0101 ../XSDs/imsikb0101_v14.2.0.xsd">
 	<imsikb0101:metaData>
 		<imsikb0101:application>urn:imsikb0101:Applicaties:id:1</imsikb0101:application>
 		<imsikb0101:database>urn:imsikb0101:Database:id:1</imsikb0101:database>
@@ -50,7 +45,7 @@
 			<imsikb0101:reportNumber>RAP0001</imsikb0101:reportNumber>
 			<imsikb0101:measurementObjects xlink:href="#_ee7aef06-09cf-4512-8e91-a69f8fe00df5"/>
 			<imsikb0101:measurementObjects xlink:href="#_1652a30c-dda0-4dad-8278-45f25747c72f"/>
-			<imsikb0101:measurementObjects xlink:href="#_a3c71cf9-5871-4dae-8d41-019903f73afa"/>										
+			<imsikb0101:measurementObjects xlink:href="#_a3c71cf9-5871-4dae-8d41-019903f73afa"/>
 		</imsikb0101:Project>
 	</imsikb0101:featureMember>
 	<!--/Project-->
@@ -124,6 +119,14 @@
 	<imsikb0101:featureMember>
 		<imsikb0101:Filter gml:id="_85bbe301-1595-479b-ae76-2d6a5f1d6766">
 			<sam:sampledFeature/>
+			<sam:relatedObservation xlink:href="#_60f20243-443e-48de-94a3-baaeb0448cee"/>
+			<sam:relatedObservation xlink:href="#_8b0e4170-cd2e-46b9-8961-dc49d2b0ff3b"/>
+			<sam:relatedObservation xlink:href="#_7ee31d0a-8ef9-4ffa-940b-4cb62cb7f010"/>
+			<sam:relatedObservation xlink:href="#_f83cda35-2ac2-4f59-a541-4ee17cb0beb1"/>
+			<sam:relatedObservation xlink:href="#_f84cda35-2ac2-4f59-a541-4ee17cb0beb1"/>
+			<sam:relatedObservation xlink:href="#_f85cda35-2ac2-4f59-a541-4ee17cb0beb1"/>
+			<sam:relatedObservation xlink:href="#_f86cda35-2ac2-4f59-a541-4ee17cb0beb1"/>
+			<sam:relatedObservation xlink:href="#_f87cda35-2ac2-4f59-a541-4ee17cb0beb1"/>
 			<!-- Hoort bij meetpunt -->
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
@@ -171,6 +174,182 @@
 		</imsikb0101:Filter>
 	</imsikb0101:featureMember>
 	<!-- /Filter 1 -->
+	<!-- Observations to Filter 1 -->
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_60f20243-443e-48de-94a3-baaeb0448cee">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:119">6.7</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>60f20243-443e-48de-94a3-baaeb0448cee</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1398</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_8b0e4170-cd2e-46b9-8961-dc49d2b0ff3b">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:18">120</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>8b0e4170-cd2e-46b9-8961-dc49d2b0ff3b</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:3548</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_7ee31d0a-8ef9-4ffa-940b-4cb62cb7f010">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:19">1.1</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>7ee31d0a-8ef9-4ffa-940b-4cb62cb7f010</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:4724</immetingen:quantity>
+					<immetingen:condition>urn:immetingen:hoedanigheid:id:11</immetingen:condition>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_f83cda35-2ac2-4f59-a541-4ee17cb0beb1">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:Staat:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>f83cda35-2ac2-4f59-a541-4ee17cb0beb1</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:1</immetingen:indicator>
+			<immetingen:remarks>goede doorstroming peilbuis</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_f84cda35-2ac2-4f59-a541-4ee17cb0beb1">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:eenheid:id:44">2</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>f84cda35-2ac2-4f59-a541-4ee17cb0beb1</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:2</immetingen:indicator>
+			<immetingen:remarks>Hoeveelheid werkwater: 2 liter</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_f85cda35-2ac2-4f59-a541-4ee17cb0beb1">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:J_of_N:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>f85cda35-2ac2-4f59-a541-4ee17cb0beb1</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:3</immetingen:indicator>
+			<immetingen:remarks>Gespoeld Ja</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_f86cda35-2ac2-4f59-a541-4ee17cb0beb1">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:J_of_N:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>f86cda35-2ac2-4f59-a541-4ee17cb0beb1</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:4</immetingen:indicator>
+			<immetingen:remarks>Leeggezogen Ja</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_f87cda35-2ac2-4f59-a541-4ee17cb0beb1">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_85bbe301-1595-479b-ae76-2d6a5f1d6766"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:J_of_N:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>f87cda35-2ac2-4f59-a541-4ee17cb0beb1</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:5</immetingen:indicator>
+			<immetingen:remarks>Filterkous Ja</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<!-- end of Observations to Filter 1 -->
 	<!-- Filter 2 -->
 	<imsikb0101:featureMember>
 		<imsikb0101:Filter gml:id="_a5884ec0-e9e5-4c43-83d2-1586363201ca">
@@ -181,8 +360,6 @@
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:4"/>
 					<sam:relatedSamplingFeature xlink:href="#_1652a30c-dda0-4dad-8278-45f25747c72f"/>
 				</sam:SamplingFeatureComplex>
-				
-				
 			</sam:relatedSamplingFeature>
 			<sams:shape/>
 			<immetingen:name/>
@@ -221,6 +398,22 @@
 	<imsikb0101:featureMember>
 		<imsikb0101:Sample gml:id="_d593fd8e-813a-4660-88ad-9e6ea38ca415">
 			<sam:sampledFeature/>
+			<sam:relatedObservation xlink:href="#_7ef31d0a-8ef9-4ffa-940b-4cb62cb7f010"/>
+			<sam:relatedObservation xlink:href="#_8ef31d0a-8ef9-4ffa-940b-4cb62cb7f010"/>
+			<sam:relatedObservation xlink:href="#_9ef31d0a-8ef9-4ffa-940b-4cb62cb7f010"/>
+			<sam:relatedObservation xlink:href="#_e496535f-ad88-48ea-b8d2-36811e10fc2f"/>
+			<sam:relatedObservation xlink:href="#_225ce451-4cb3-4476-9dff-62150724a313"/>
+			<sam:relatedObservation xlink:href="#_525ce451-4cb3-4476-9dff-62150724a313"/>
+			<sam:relatedObservation xlink:href="#_625ce451-4cb3-4476-9dff-62150724a313"/>
+			<sam:relatedObservation xlink:href="#_725ce451-4cb3-4476-9dff-62150724a313"/>
+			<sam:relatedObservation xlink:href="#_825ce451-4cb3-4476-9dff-62150724a313"/>
+			<sam:relatedObservation xlink:href="#_1b0e4170-cd2e-46b9-8961-dc49d2b0ff3b"/>
+			<sam:relatedObservation xlink:href="#_80f20243-443e-48de-94a3-baaeb0448cee"/>
+			<sam:relatedObservation xlink:href="#_91f20243-443e-48de-94a3-baaeb0448cee"/>
+			<sam:relatedObservation xlink:href="#_73f20243-443e-48de-94a3-baaeb0448cee"/>
+			<sam:relatedObservation xlink:href="#_62f20243-443e-48de-94a3-baaeb0448cee"/>
+			<sam:relatedObservation xlink:href="#_53f20243-443e-48de-94a3-baaeb0448cee"/>
+			<sam:relatedObservation xlink:href="#_43f20243-443e-48de-94a3-baaeb0448cab"/>
 			<!--In Borehole -->
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
@@ -312,6 +505,437 @@
 		</imsikb0101:Sample>
 	</imsikb0101:featureMember>
 	<!-- /Sample 0 veldmonster Water-->
+	<!-- Observations to Sample 0 Veldmonster water-->
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_7ef31d0a-8ef9-4ffa-940b-4cb62cb7f010">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:19">37</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>7ef31d0a-8ef9-4ffa-940b-4cb62cb7f010</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:4724</immetingen:quantity>
+					<immetingen:condition>urn:immetingen:hoedanigheid:id:11</immetingen:condition>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_8ef31d0a-8ef9-4ffa-940b-4cb62cb7f010">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:214">47</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>8ef31d0a-8ef9-4ffa-940b-4cb62cb7f010</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:3300</immetingen:quantity>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_9ef31d0a-8ef9-4ffa-940b-4cb62cb7f010">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:75">35</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>9ef31d0a-8ef9-4ffa-940b-4cb62cb7f010</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1456</immetingen:quantity>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_b7f0e6be-e637-427c-9a7d-1abf7ebc1617">
+			<om:relatedObservation>
+				<om:ObservationContext>
+					<om:role xlink:href="urn:immetingen:RelatedObservationRollen:id:2"/>
+					<om:relatedObservation xlink:href="#_e496535f-ad88-48ea-b8d2-36811e10fc2f"/>
+				</om:ObservationContext>
+			</om:relatedObservation>
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:kleur:id:8</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>b7f0e6be-e637-427c-9a7d-1abf7ebc1617</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:11</immetingen:indicator>
+			<immetingen:remarks>geel</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_a7f0e6be-e637-427c-9a7d-1abf7ebc1617">
+			<om:relatedObservation>
+				<om:ObservationContext>
+					<om:role xlink:href="urn:immetingen:RelatedObservationRollen:id:2"/>
+					<om:relatedObservation xlink:href="#_e496535f-ad88-48ea-b8d2-36811e10fc2f"/>
+				</om:ObservationContext>
+			</om:relatedObservation>
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:Kleursterkte:id:4</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>a7f0e6be-e637-427c-9a7d-1abf7ebc1617</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:12</immetingen:indicator>
+			<immetingen:remarks>donker</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_e496535f-ad88-48ea-b8d2-36811e10fc2f">
+			<om:relatedObservation>
+				<om:ObservationContext>
+					<om:role xlink:href="urn:immetingen:RelatedObservationRollen:id:2"/>
+					<om:relatedObservation xlink:href="#_b7f0e6be-e637-427c-9a7d-1abf7ebc1617"/>
+				</om:ObservationContext>
+			</om:relatedObservation>
+			<om:relatedObservation>
+				<om:ObservationContext>
+					<om:role xlink:href="urn:immetingen:RelatedObservationRollen:id:2"/>
+					<om:relatedObservation xlink:href="#_a7f0e6be-e637-427c-9a7d-1abf7ebc1617"/>
+				</om:ObservationContext>
+			</om:relatedObservation>
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:Kleur:id:10</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>e496535f-ad88-48ea-b8d2-36811e10fc2f</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:10</immetingen:indicator>
+			<immetingen:remarks/>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_225ce451-4cb3-4476-9dff-62150724a313">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:DescriptionResultType">
+				<immetingen:description>zwakke riool</immetingen:description>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>225ce451-4cb3-4476-9dff-62150724a313</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:9</immetingen:indicator>
+			<immetingen:remarks/>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_525ce451-4cb3-4476-9dff-62150724a313">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:J_of_N:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>525ce451-4cb3-4476-9dff-62150724a313</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:13</immetingen:indicator>
+			<immetingen:remarks/>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_625ce451-4cb3-4476-9dff-62150724a313">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:J_of_N:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>625ce451-4cb3-4476-9dff-62150724a313</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:6</immetingen:indicator>
+			<immetingen:remarks/>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_725ce451-4cb3-4476-9dff-62150724a313">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:ClassifiedResultType">
+				<immetingen:classifiedResult>urn:immetingen:J_of_N:id:1</immetingen:classifiedResult>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>725ce451-4cb3-4476-9dff-62150724a313</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:7</immetingen:indicator>
+			<immetingen:remarks/>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Characteristic gml:id="_825ce451-4cb3-4476-9dff-62150724a313">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="44">1</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>825ce451-4cb3-4476-9dff-62150724a313</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:indicator>urn:immetingen:KenmerkMonstername:id:8</immetingen:indicator>
+			<immetingen:remarks>Hoeveelheid voorgepompt water: 1 liter</immetingen:remarks>
+		</immetingen:Characteristic>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_1b0e4170-cd2e-46b9-8961-dc49d2b0ff3b">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:18">88</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>1b0e4170-cd2e-46b9-8961-dc49d2b0ff3b</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:3548</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_80f20243-443e-48de-94a3-baaeb0448cee">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:119">6.5</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>80f20243-443e-48de-94a3-baaeb0448cee</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1398</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_91f20243-443e-48de-94a3-baaeb0448cee">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:119">6.5</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>91f20243-443e-48de-94a3-baaeb0448cee</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1398</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_73f20243-443e-48de-94a3-baaeb0448cee">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:8">16</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>73f20243-443e-48de-94a3-baaeb0448cee</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1522</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_62f20243-443e-48de-94a3-baaeb0448cee">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:60">2</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>62f20243-443e-48de-94a3-baaeb0448cee</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1701</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_53f20243-443e-48de-94a3-baaeb0448cee">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:75">35</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>53f20243-443e-48de-94a3-baaeb0448cee</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:1456</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<imsikb0101:featureMember>
+		<immetingen:Analysis gml:id="_43f20243-443e-48de-94a3-baaeb0448cab">
+			<om:phenomenonTime/>
+			<om:resultTime/>
+			<om:procedure/>
+			<om:parameter/>
+			<om:observedProperty/>
+			<om:featureOfInterest xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+			<om:result xsi:type="immetingen:MeasureResultType">
+				<immetingen:numericValue uom="urn:immetingen:Eenheid:id:258">50</immetingen:numericValue>
+			</om:result>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>43f20243-443e-48de-94a3-baaeb0448cab</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:physicalProperty>
+				<immetingen:PhysicalProperty>
+					<immetingen:quantity>urn:immetingen:parameter:id:2031</immetingen:quantity>
+					<immetingen:condition/>
+				</immetingen:PhysicalProperty>
+			</immetingen:physicalProperty>
+		</immetingen:Analysis>
+	</imsikb0101:featureMember>
+	<!-- end of Observations to Sample 0 Veldmonster water-->
 	<!-- Borehole 2 -->
 	<imsikb0101:featureMember>
 		<imsikb0101:Borehole gml:id="_1652a30c-dda0-4dad-8278-45f25747c72f">
@@ -491,7 +1115,7 @@
 			<imsikb0101:filtertubeMaterial>Materiaal</imsikb0101:filtertubeMaterial>
 		</imsikb0101:Filter>
 	</imsikb0101:featureMember>
-	<!-- /Filter 4 -->	
+	<!-- /Filter 4 -->
 	<!-- Subject -->
 	<imsikb0101:featureMember>
 		<immetingen:Organization gml:id="_4ca84d18-be8b-48f6-8fff-a9073da8db27">
@@ -512,6 +1136,39 @@
 		</immetingen:Organization>
 	</imsikb0101:featureMember>
 	<!-- /Subject -->
+	<!-- WaterSample 1 AnalysisSample-->
+	<imsikb0101:featureMember>
+		<imsikb0101:Sample gml:id="_c1adf8f7-e0cd-4810-a93e-60580f34b3fa">
+			<sam:sampledFeature/>
+			<sam:relatedObservation xlink:href="#_850d533c-4087-4229-aa81-f916569428ed"/>
+			
+			<!-- Veldmonster 1 -->
+			<sam:relatedSamplingFeature>
+				<sam:SamplingFeatureComplex>
+					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:10"/>
+					<sam:relatedSamplingFeature xlink:href="#_d593fd8e-813a-4660-88ad-9e6ea38ca415"/>
+				</sam:SamplingFeatureComplex>
+			</sam:relatedSamplingFeature>
+			<!-- /Veldmonster 1 -->
+			
+			<spec:materialClass xlink:href="urn:immetingen:Compartiment:id:2"/>
+			<spec:samplingTime>
+				<gml:TimeInstant gml:id="_89f63e1e-a156-461c-8d77-bbaf108b60a4">
+					<gml:timePosition>2013-04-12T11:00:00</gml:timePosition>
+				</gml:TimeInstant>
+			</spec:samplingTime>
+			<spec:specimenType xlink:href="urn:immetingen:MonsterType:id:10"/>
+			<immetingen:identification>
+				<immetingen:NEN3610ID>
+					<immetingen:namespace>SIKB</immetingen:namespace>
+					<immetingen:lokaalID>c1adf8f7-e0cd-4810-a93e-60580f34b3fa</immetingen:lokaalID>
+				</immetingen:NEN3610ID>
+			</immetingen:identification>
+			<immetingen:name>WA1-1</immetingen:name> 			
+			<imsikb0101:inProject xlink:href="#_015c6207-2bed-4f3b-bb40-8ab94079bff5"/>
+		</imsikb0101:Sample>
+	</imsikb0101:featureMember>
+	<!-- /WaterSample 1 AnalysisSample-->
 	<!-- Sample 4 Water Analysis 1-->
 	<imsikb0101:featureMember>
 		<immetingen:Analysis gml:id="_850d533c-4087-4229-aa81-f916569428ed">
@@ -566,7 +1223,8 @@
 			<immetingen:samplePretreatmentMethod>urn:iimsikb0101:MonsterVoorbehandeling:id:3</immetingen:samplePretreatmentMethod>
 			<immetingen:samplePretreatmentDate>2013-07-09</immetingen:samplePretreatmentDate>
 			<immetingen:valuationMethod>urn:immetingen:waardebepalingsmethode:id:44</immetingen:valuationMethod>
-			<immetingen:analysisOperator xlink:href="#_4ca84d18-be8b-48f6-8fff-a9073da8db27"/>						
+			<immetingen:measurementOrganisation codeSpace="www.sikb.nl">urn:immetingen:Meetinstantie:id:7</immetingen:measurementOrganisation> <!-- synlab -->
+			<immetingen:analysisOperator xlink:href="#_4ca84d18-be8b-48f6-8fff-a9073da8db27"/>
 		</immetingen:AnalysisProcess>
 	</imsikb0101:featureMember>
 	<!-- /Sample 4 Water AnalysisProcess-->

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gar:registrationRequest xmlns:sikb="http://www.sikb.nl/imsikb0101"
+                         xmlns:gar="http://www.broservices.nl/xsd/isgar/1.0"
+                         xmlns:brocom="http://www.broservices.nl/xsd/brocommon/3.0"
+                         xmlns:gml="http://www.opengis.net/gml/3.2"
+                         xmlns:imm="http://www.sikb.nl/immetingen"
+                         xmlns:garcom="http://www.broservices.nl/xsd/garcommon/1.0"
+                         xmlns:sam="http://www.opengis.net/sampling/2.0"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xmlns:spec="http://www.opengis.net/samplingSpecimen/2.0"
+                         xmlns:om="http://www.opengis.net/om/2.0"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+   <brocom:requestReference>[todo-mapping?]</brocom:requestReference>
+   <brocom:deliveryAccountableParty/>
+   <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
+   <gar:sourceDocument>
+      <gar:GAR gml:id="_41ff3820-4f42-4478-895b-ead21ac2870d">
+         <gar:objectIdAccountableParty>41ff3820-4f42-4478-895b-ead21ac2870d</gar:objectIdAccountableParty>
+         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb
+            sample file]</gar:qualityControlMethod>
+         <gar:groundwaterMonitoringNet>
+            <garcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
+               <garcom:broId>GMN123456789012</garcom:broId>
+            </garcom:GroundwaterMonitoringNet>
+         </gar:groundwaterMonitoringNet>
+         <gar:monitoringPoint>
+            <garcom:GroundwaterMonitoringTube gml:id="_dd031d27-eb13-4650-bc70-fc921c78b6ae"><!--
+                    $sikb-borehole-id = _dd031d27-eb13-4650-bc70-fc921c78b6ae 
+                    $sikb-filter-id = _677423d0-2366-4e30-bd23-2d1f592c2ab0-->
+               <garcom:broId>GMW012345678901</garcom:broId>
+               <garcom:tubeNumber>1</garcom:tubeNumber>
+            </garcom:GroundwaterMonitoringTube>
+         </gar:monitoringPoint>
+         <fieldResearch>
+            <garcom:samplingDateTime>2019-04-01T00:00:00</garcom:samplingDateTime>
+            <garcom:samplingOperator>
+               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, no sampling
+                    organisation in source]</brocom:chamberOfCommerceNumber>
+            </garcom:samplingOperator>
+            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample
+                file]</garcom:samplingStandard>
+            <garcom:samplingDevice>
+               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample
+                    file]</garcom:pumpType>
+            </garcom:samplingDevice>
+            <!--[todo rest of fieldResearch, no Characteristics in sample file]
+                -->
+         </fieldResearch>
+         <gar:laboratoryAnalysis/>
+         <gar:laboratoryAnalysis/>
+         <gar:laboratoryAnalysis/>
+      </gar:GAR>
+      <gar:GAR gml:id="_04192fcd-ee30-43ac-b15e-7f30aea53b7b">
+         <gar:objectIdAccountableParty>04192fcd-ee30-43ac-b15e-7f30aea53b7b</gar:objectIdAccountableParty>
+         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb
+            sample file]</gar:qualityControlMethod>
+         <gar:groundwaterMonitoringNet>
+            <garcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
+               <garcom:broId>GMN123456789012</garcom:broId>
+            </garcom:GroundwaterMonitoringNet>
+         </gar:groundwaterMonitoringNet>
+         <gar:monitoringPoint>
+            <garcom:GroundwaterMonitoringTube gml:id="_dd031d27-eb13-4650-bc70-fc921c78b6ae"><!--
+                    $sikb-borehole-id = _dd031d27-eb13-4650-bc70-fc921c78b6ae 
+                    $sikb-filter-id = _690f7645-ddea-4dcb-ab41-8c24c5a853c6-->
+               <garcom:broId>GMW012345678901</garcom:broId>
+               <garcom:tubeNumber>1</garcom:tubeNumber>
+            </garcom:GroundwaterMonitoringTube>
+         </gar:monitoringPoint>
+         <fieldResearch>
+            <garcom:samplingDateTime>2019-04-01T00:00:00</garcom:samplingDateTime>
+            <garcom:samplingOperator>
+               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, no sampling
+                    organisation in source]</brocom:chamberOfCommerceNumber>
+            </garcom:samplingOperator>
+            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample
+                file]</garcom:samplingStandard>
+            <garcom:samplingDevice>
+               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample
+                    file]</garcom:pumpType>
+            </garcom:samplingDevice>
+            <!--[todo rest of fieldResearch, no Characteristics in sample file]
+                -->
+         </fieldResearch>
+      </gar:GAR>
+      <gar:GAR gml:id="_1a85c4ff-f06c-4d09-858c-dbf96796f194">
+         <gar:objectIdAccountableParty>1a85c4ff-f06c-4d09-858c-dbf96796f194</gar:objectIdAccountableParty>
+         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb
+            sample file]</gar:qualityControlMethod>
+         <gar:groundwaterMonitoringNet>
+            <garcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
+               <garcom:broId>GMN123456789012</garcom:broId>
+            </garcom:GroundwaterMonitoringNet>
+         </gar:groundwaterMonitoringNet>
+         <gar:monitoringPoint>
+            <garcom:GroundwaterMonitoringTube gml:id="_108f9145-8163-41d2-8e64-3a567365c00c"><!--
+                    $sikb-borehole-id = _108f9145-8163-41d2-8e64-3a567365c00c 
+                    $sikb-filter-id = _b3bc9aab-7b47-498a-b246-4ef89e1b312e-->
+               <garcom:broId>GMW012345678901</garcom:broId>
+               <garcom:tubeNumber>1</garcom:tubeNumber>
+            </garcom:GroundwaterMonitoringTube>
+         </gar:monitoringPoint>
+         <fieldResearch>
+            <garcom:samplingDateTime>2019-04-01T00:00:00</garcom:samplingDateTime>
+            <garcom:samplingOperator>
+               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, no sampling
+                    organisation in source]</brocom:chamberOfCommerceNumber>
+            </garcom:samplingOperator>
+            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample
+                file]</garcom:samplingStandard>
+            <garcom:samplingDevice>
+               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample
+                    file]</garcom:pumpType>
+            </garcom:samplingDevice>
+            <!--[todo rest of fieldResearch, no Characteristics in sample file]
+                -->
+         </fieldResearch>
+      </gar:GAR>
+   </gar:sourceDocument>
+</gar:registrationRequest>

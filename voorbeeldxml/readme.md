@@ -14,6 +14,10 @@ Dit is een voorbeeld hoe het werkt met een veldmonster en analysemonster.
 
 ### Watermonster (met meerdere flessen)
 
+Het Veldmonster water heeft allerlei metingen zoals in de excel sheet die ook in deze folder staat, met waarnemingen aan een watermonster veld.
+
+De filter is voorzien van de benodigde waarnemingen om het volledig te maken.
+
 - Veldmonster – ``WA1, matrix = GW     (MonsterType = 1)``			
     - Verpakking – ``Fles WA1-1, barcode: dfsfdslasd``				
     - Verpakking – ``Fles WA1-2, barcode: fdsvfdsvfs``				
