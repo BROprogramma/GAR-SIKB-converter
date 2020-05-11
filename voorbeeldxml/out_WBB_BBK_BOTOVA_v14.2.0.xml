@@ -46,9 +46,1361 @@
             <!--[todo rest of fieldResearch, no Characteristics in sample file]
                 -->
          </fieldResearch>
-         <gar:laboratoryAnalysis/>
-         <gar:laboratoryAnalysis/>
-         <gar:laboratoryAnalysis/>
+         <gar:laboratoryAnalysis>
+            <garcom:responsibleLaboratory>
+               <brocom:chamberOfCommerceNumber>[todo mapping based on id:]urn:immetingen:Meetinstantie:id:7</brocom:chamberOfCommerceNumber>
+            </garcom:responsibleLaboratory>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>225</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.02</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1365</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1200</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">50</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>517</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">1</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>527</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">20</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1267</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">15</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>971</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">15</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1693</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">65</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>310</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">10</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1243</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>441</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.4</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>622</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.8</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>333</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">50</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1097</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1116</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">15</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1259</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>508</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">100</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>537</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>2595</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">10</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>2595</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">10</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>2595</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">10</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>342</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>728</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">4</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1568</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">7</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1686</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>751</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>531</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>466</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1460</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>875</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1259</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>299</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0007</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>746</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.003</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>775</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.003</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>518</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.003</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>345</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0001</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>346</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0005</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>353</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0004</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>882</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0004</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>351</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0003</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>508</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">100000</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>519</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>9</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>619</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1711</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">6</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1538</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>8</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">7</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>36</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">7</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>4</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>6</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1598</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">24</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1536</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1246</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">7</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>607</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">3</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1595</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1533</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1387</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.003</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>861</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">9E-05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>615</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.2</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1248</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.3</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1600</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.03</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1537</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1390</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.04</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>271</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.033</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>366</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.008</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>816</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.009</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>853</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">5E-06</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>857</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">5E-06</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>268</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">9E-06</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>633</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0001</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>704</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">4E-05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>269</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0002</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>325</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.029</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>480</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">2E-05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>328</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.0001</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>458</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.002</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>462</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.009</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1714</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">5E-05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>2583</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">5E-05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>555</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">4E-06</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T00:00:00</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>849</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.05</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1544</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1451</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1546</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>542</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1503</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">6</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1200</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">50</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>1654</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.01</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="_e911262c-d247-4aad-8fea-ae095f62b495">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>808</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.5</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+            <!--distinct-values(//om:procedure/@xlink:href)-->
+            <garcom:analysisProcess id="">
+               <garcom:analysisDate>
+                  <brocom:date>2019-04-01T14:48:41.453</brocom:date>
+               </garcom:analysisDate>
+               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique"/>
+               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod"/>
+               <garcom:analysis>
+                  <garcom:parameter>254</garcom:parameter>
+                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:eenheid:id:14">0.08</garcom:analysisMeasurementValue>
+                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
+                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file
+            yet]</garcom:reportingLimit>
+               </garcom:analysis>
+            </garcom:analysisProcess>
+         </gar:laboratoryAnalysis>
       </gar:GAR>
       <gar:GAR gml:id="_04192fcd-ee30-43ac-b15e-7f30aea53b7b">
          <gar:objectIdAccountableParty>04192fcd-ee30-43ac-b15e-7f30aea53b7b</gar:objectIdAccountableParty>
@@ -82,6 +1434,11 @@
             <!--[todo rest of fieldResearch, no Characteristics in sample file]
                 -->
          </fieldResearch>
+         <gar:laboratoryAnalysis>
+            <garcom:responsibleLaboratory>
+               <brocom:chamberOfCommerceNumber>[todo mapping based on id:]urn:immetingen:Meetinstantie:id:7</brocom:chamberOfCommerceNumber>
+            </garcom:responsibleLaboratory>
+         </gar:laboratoryAnalysis>
       </gar:GAR>
       <gar:GAR gml:id="_1a85c4ff-f06c-4d09-858c-dbf96796f194">
          <gar:objectIdAccountableParty>1a85c4ff-f06c-4d09-858c-dbf96796f194</gar:objectIdAccountableParty>
@@ -115,6 +1472,11 @@
             <!--[todo rest of fieldResearch, no Characteristics in sample file]
                 -->
          </fieldResearch>
+         <gar:laboratoryAnalysis>
+            <garcom:responsibleLaboratory>
+               <brocom:chamberOfCommerceNumber>[todo mapping based on id:]urn:immetingen:Meetinstantie:id:7</brocom:chamberOfCommerceNumber>
+            </garcom:responsibleLaboratory>
+         </gar:laboratoryAnalysis>
       </gar:GAR>
    </gar:sourceDocument>
 </gar:registrationRequest>

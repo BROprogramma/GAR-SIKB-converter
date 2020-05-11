@@ -81,37 +81,45 @@
 			<sam:sampledFeature/>
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
+					<!-- hoort bij meetobject -->
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:4"/>
+					<!-- borehole-->
 					<sam:relatedSamplingFeature xlink:href="#_dd031d27-eb13-4650-bc70-fc921c78b6ae"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
+					<!-- heeft monster -->
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:1"/>
+					<!-- sample -->
 					<sam:relatedSamplingFeature xlink:href="#_41ff3820-4f42-4478-895b-ead21ac2870d"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:1"/>
+					<!-- sample -->
 					<sam:relatedSamplingFeature xlink:href="#_5e2ba10c-dad8-4329-9636-27f809db1953"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:1"/>
+					<!-- sample -->
 					<sam:relatedSamplingFeature xlink:href="#_0794820c-332d-4544-9a73-a39f8ac1ba6d"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:1"/>
+					<!-- sample -->
 					<sam:relatedSamplingFeature xlink:href="#_d992663c-be9b-4b1b-be26-bb8fced3be85"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:1"/>
+					<!-- sample -->
 					<sam:relatedSamplingFeature xlink:href="#_ee6e295b-dc46-4319-acdd-5152c66a95d5"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
@@ -147,6 +155,7 @@
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:4"/>
+					<!-- borehole-->
 					<sam:relatedSamplingFeature xlink:href="#_dd031d27-eb13-4650-bc70-fc921c78b6ae"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>
@@ -194,6 +203,7 @@
 			<sam:relatedSamplingFeature>
 				<sam:SamplingFeatureComplex>
 					<sam:role xlink:href="urn:immetingen:RelatedSamplingFeatureRollen:id:4"/>
+					<!-- borehole-->
 					<sam:relatedSamplingFeature xlink:href="#_108f9145-8163-41d2-8e64-3a567365c00c"/>
 				</sam:SamplingFeatureComplex>
 			</sam:relatedSamplingFeature>

@@ -16,79 +16,40 @@
    <gar:sourceDocument>
       <gar:GAR gml:id="_d593fd8e-813a-4660-88ad-9e6ea38ca415">
          <gar:objectIdAccountableParty>d593fd8e-813a-4660-88ad-9e6ea38ca415</gar:objectIdAccountableParty>
-         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb sample file]</gar:qualityControlMethod>
+         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb
+            sample file]</gar:qualityControlMethod>
          <gar:groundwaterMonitoringNet>
             <garcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
                <garcom:broId>GMN123456789012</garcom:broId>
             </garcom:GroundwaterMonitoringNet>
          </gar:groundwaterMonitoringNet>
          <gar:monitoringPoint>
-            <garcom:GroundwaterMonitoringTube gml:id="GMW123456789012_0003">
-               <garcom:broId>GMW123456789012</garcom:broId>
-               <garcom:tubeNumber>3</garcom:tubeNumber>
+            <garcom:GroundwaterMonitoringTube gml:id="_1652a30c-dda0-4dad-8278-45f25747c72f"><!--
+                    $sikb-borehole-id = _1652a30c-dda0-4dad-8278-45f25747c72f 
+                    $sikb-filter-id = _85bbe301-1595-479b-ae76-2d6a5f1d6766-->
+               <garcom:broId>GMW012345678901</garcom:broId>
+               <garcom:tubeNumber>1</garcom:tubeNumber>
             </garcom:GroundwaterMonitoringTube>
          </gar:monitoringPoint>
          <fieldResearch>
             <garcom:samplingDateTime>2013-04-12T14:15:00.00</garcom:samplingDateTime>
             <garcom:samplingOperator>
-               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, value of measurementOrganisation kvk]</brocom:chamberOfCommerceNumber>
+               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, no sampling
+                    organisation in source]</brocom:chamberOfCommerceNumber>
             </garcom:samplingOperator>
-            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample file]</garcom:samplingStandard>
+            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample
+                file]</garcom:samplingStandard>
             <garcom:samplingDevice>
-               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample file]</garcom:pumpType>
-            </garcom:samplingDevice>[todo rest of fieldResearch]
-                </fieldResearch>
+               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample
+                    file]</garcom:pumpType>
+            </garcom:samplingDevice>
+            <!--[todo rest of fieldResearch, no Characteristics in sample file]
+                -->
+         </fieldResearch>
          <gar:laboratoryAnalysis>
-            <garcom:analysisProcess>
-               <garcom:analysisDate>
-                  <brocom:date>[todo find linked TimePeriod by id: #_1645261c-381e-4af2-a7d5-78fc4e73aa78</brocom:date>
-               </garcom:analysisDate>
-               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique">12</garcom:analyticalTechnique>
-               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod">44</garcom:valuationMethod>
-               <garcom:analysis>
-                  <garcom:parameter>216</garcom:parameter>
-                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:Eenheid:id:59">633.2</garcom:analysisMeasurementValue>
-                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
-                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file yet]</garcom:reportingLimit>
-                  <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">onbeslist</garcom:qualityControlStatus>
-               </garcom:analysis>
-            </garcom:analysisProcess>
-         </gar:laboratoryAnalysis>
-      </gar:GAR>
-      <gar:GAR gml:id="_c1adf8f7-e0cd-4810-a93e-60580f34b3fa">
-         <gar:objectIdAccountableParty>c1adf8f7-e0cd-4810-a93e-60580f34b3fa</gar:objectIdAccountableParty>
-         <gar:qualityControlMethod codeSpace="urn:bro:gar:QualityControlMethod">[todo: not in sikb sample file]</gar:qualityControlMethod>
-         <gar:groundwaterMonitoringNet>
-            <garcom:GroundwaterMonitoringNet gml:id="GMN123456789012">
-               <garcom:broId>GMN123456789012</garcom:broId>
-            </garcom:GroundwaterMonitoringNet>
-         </gar:groundwaterMonitoringNet>
-         <gar:monitoringPoint/>
-         <fieldResearch>
-            <garcom:samplingDateTime/>
-            <garcom:samplingOperator>
-               <brocom:chamberOfCommerceNumber>[todo samplingOperator mapping, value of measurementOrganisation kvk]</brocom:chamberOfCommerceNumber>
-            </garcom:samplingOperator>
-            <garcom:samplingStandard codeSpace="urn:bro:gar:SamplingStandard">[todo not in sample file]</garcom:samplingStandard>
-            <garcom:samplingDevice>
-               <garcom:pumpType codeSpace="urn:bro:gar:PumpType">[todo not in sample file]</garcom:pumpType>
-            </garcom:samplingDevice>[todo rest of fieldResearch]
-                </fieldResearch>
-         <gar:laboratoryAnalysis>
-            <garcom:analysisProcess>
-               <garcom:analysisDate>
-                  <brocom:date>[todo find linked TimePeriod by id: #_1645261c-381e-4af2-a7d5-78fc4e73aa78</brocom:date>
-               </garcom:analysisDate>
-               <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique">12</garcom:analyticalTechnique>
-               <garcom:valuationMethod codeSpace="urn:bro:gar:ValuationMethod">44</garcom:valuationMethod>
-               <garcom:analysis>
-                  <garcom:parameter>216</garcom:parameter>
-                  <garcom:analysisMeasurementValue uom="[todo get uom name from aquo codelist] urn:immetingen:Eenheid:id:59">633.2</garcom:analysisMeasurementValue>
-                  <garcom:limitSymbol codeSpace="urn:bro:gar:LimitSymbol">LT</garcom:limitSymbol>
-                  <garcom:reportingLimit uom="mg/l">[todo no reportingLimit in sample file yet]</garcom:reportingLimit>
-                  <garcom:qualityControlStatus codeSpace="urn:bro:gar:QualityControlStatus">onbeslist</garcom:qualityControlStatus>
-               </garcom:analysis>
-            </garcom:analysisProcess>
+            <garcom:responsibleLaboratory>
+               <brocom:chamberOfCommerceNumber>[todo mapping based on id:]urn:immetingen:Meetinstantie:id:7</brocom:chamberOfCommerceNumber>
+            </garcom:responsibleLaboratory>
          </gar:laboratoryAnalysis>
       </gar:GAR>
    </gar:sourceDocument>

@@ -51,7 +51,7 @@
             <!-- assumption is that quality regime is always IMBRO (we are converting current data, not old data from some archive -->
             <brocom:qualityRegime>IMBRO</brocom:qualityRegime>
             <gar:sourceDocument>
-                <!-- grouping the samples based on the related filter -->
+                <!-- grouping the samples based on the related filter (role 7 indicates related filter) -->
                 <xsl:for-each-group select="sikb:featureMember/sikb:Sample"
                     group-by="sam:relatedSamplingFeature/sam:SamplingFeatureComplex[substring-after(sam:role/@xlink:href, 'id:') = '7']/sam:relatedSamplingFeature/@xlink:href">
                     <gar:GAR>
@@ -133,38 +133,36 @@
                 </garcom:fieldMeasurement>-->
         </fieldResearch>
         <!-- group the relatedobservations by valuationMethod, assuming it's always the same lab in the source data (otherwise we need to group by lab first) -->
-<!--    werkt niet     <xsl:for-each-group
-            select="/sikb:FeatureCollectionIMSIKB0101/sikb:featureMember/imm:Analysis[@gml:id = substring-after(current()/sam:relatedObservation/@xlink:href, '#')]"
-            group-by="om:procedure/@xlink:href">-->
-        <xsl:for-each-group
-            select="sam:relatedObservation" group-by="/sikb:FeatureCollectionIMSIKB0101/sikb:featureMember/imm:Analysis[@gml:id = substring-after(current()/@xlink:href, '#')]/om:procedure/@xlink:href">
-            <xsl:variable name="analysis" select="."/>
-            <!-- issue: Time Period object is not in the sample file -->
-            <xsl:variable name="analysis-date" select="om:resultTime/@xlink:href"/>
-            <!-- fetch the id of responsibleLab:-->
-            <gar:laboratoryAnalysis>
-                <xsl:for-each
-                    select="//imm:AnalysisProcess[@gml:id = substring-after(current()/om:procedure/@xlink:href, '#')]">
-                    <!-- fetch the responsibleLab info: -->
-                    <xsl:for-each
-                        select="//imm:Organisation[@gml:id = substring-after(current()/imm:analysisOperator/@xlink:href, '#')]">
-                        <garcom:responsibleLaboratory>
-                            <brocom:chamberOfCommerceNumber>[todo get kvknr from aquo codelist based
-                                on id: <xsl:value-of select="@gml:id"
-                                />]</brocom:chamberOfCommerceNumber>
-                            <!-- You have a CHOICE of the next 2 items at this level
-                        <brocom:chamberOfCommerceNumber>?</brocom:chamberOfCommerceNumber>
-                         if no kvk (how to determine this?) then use this:
-                        <brocom:europeanCompanyRegistrationNumber>?</brocom:europeanCompanyRegistrationNumber>
-                       <brocom:europeanCompanyRegistrationNumber>DER2507_R2</brocom:europeanCompanyRegistrationNumber> -->
-                        </garcom:responsibleLaboratory>
-                    </xsl:for-each>
+       
+        <gar:laboratoryAnalysis>
+            <!-- fetch the responsibleLab info. Always the same lab, so just fetch the first one from the file-->
+            <garcom:responsibleLaboratory>
+                <brocom:chamberOfCommerceNumber>[todo mapping based on id:]<xsl:value-of select="/sikb:FeatureCollectionIMSIKB0101/sikb:featureMember/imm:AnalysisProcess[not(preceding::imm:AnalysisProcess)]/imm:measurementOrganisation"/>
+                </brocom:chamberOfCommerceNumber>
+            </garcom:responsibleLaboratory>
+            <!-- fetch the observations, grouped by procedure -->
+        <xsl:for-each select="sam:relatedObservation">
+            <!--<debug> werkt, kan weg <xsl:value-of select="/sikb:FeatureCollectionIMSIKB0101/sikb:featureMember/imm:Analysis[@gml:id = substring-after(current()/@xlink:href, '#')]/om:procedure/@xlink:href"/></debug>-->
+            <xsl:for-each-group select="/sikb:FeatureCollectionIMSIKB0101/sikb:featureMember/imm:Analysis[@gml:id = substring-after(current()/@xlink:href, '#')]"
+                group-by="om:procedure/@xlink:href">
+                <xsl:comment>distinct-values(//om:procedure/@xlink:href)</xsl:comment>
+                <xsl:variable name="analysis" select="."/>
+                <xsl:variable name="procedure" select="/sikb:FeatureCollectionIMSIKB0101/sikb:featureMember/imm:AnalysisProcess[@gml:id = substring-after(current()/om:procedure/@xlink:href, '#')]"/>
+                <!--
+                <xsl:comment><xsl:copy-of select="$analysis"/></xsl:comment>-->
+                <!-- analysis date is just one of the result times from the group -->
+                <xsl:variable name="analysis-date">
+                    <xsl:choose>
+                        <xsl:when test="om:resultTime/@xlink:href"><xsl:value-of select="//gml:TimeInstant[@gml:id = substring-after(om:resultTime/@xlink:href, '#')]/gml:timePosition"/></xsl:when>
+                        <xsl:otherwise><xsl:value-of select="om:resultTime/gml:TimeInstant/gml:timePosition"/></xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
                     <!-- create a garcom:analysisProcess for each group of analysis done with the same method -->
-                    <garcom:analysisProcess>
+                <!-- id added for debug reasons -->
+                    <garcom:analysisProcess id="{$procedure/@gml:id}">
                         <garcom:analysisDate>
                             <!-- mapped to enddate of analysis - since they are grouped by method they should all be done at the same time we assume -->
-                            <brocom:date>[todo find linked TimePeriod by id: <xsl:value-of
-                                    select="$analysis-date"/></brocom:date>
+                            <brocom:date><xsl:value-of select="$analysis-date"/></brocom:date>
                         </garcom:analysisDate>
                         <!-- probably need to get the aquo code based on the SIKB id stored in the SIKB0101 file -->
                         <garcom:analyticalTechnique codeSpace="urn:bro:gar:AnalyticalTechnique">
@@ -177,10 +175,12 @@
                         <!-- issue: don't know yet if this works if there are multiple analyses -->
                         <xsl:apply-templates select="$analysis"/>
                     </garcom:analysisProcess>
-                </xsl:for-each>
-            </gar:laboratoryAnalysis>
-        </xsl:for-each-group>
+                    <!--</xsl:for-each>-->
+                
+            </xsl:for-each-group>
 
+        </xsl:for-each>
+        </gar:laboratoryAnalysis>
     </xsl:template>
 
     <xsl:template match="imm:Analysis">
